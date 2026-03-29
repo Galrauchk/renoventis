@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B4332;
+  --color-accent: #52B788;
+  --color-accent-warm: #F4A261;
+  --color-surface: #F0FAF4;
+  --color-dark: #081C15;
+  --color-text: #1B2521;
+  --color-text-muted: #6B7280;
+  --font-heading: 'Urbanist', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}

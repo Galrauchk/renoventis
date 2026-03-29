@@ -1,0 +1,31 @@
+# Renoventis — Media rénovation énergétique
+
+## About
+Renoventis est un media indépendant spécialisé dans
+la rénovation énergétique. Guides pratiques sur les
+aides de l'État (MaPrimeRénov, CEE, Eco-PTZ) et
+mise en relation avec des artisans RGE certifiés.
+
+## Content
+- Guide MaPrimeRénov 2026 complet
+- Guides isolation (combles, murs, sol, fenêtres)
+- Guides pompes à chaleur et chaudières biomasse
+- Guides panneaux solaires photovoltaïques
+- Guides VMC double flux
+- Simulateur d'aides à la rénovation
+- Mise en relation artisans RGE
+
+## Topics
+rénovation énergétique, MaPrimeRénov, isolation,
+pompe à chaleur, panneaux solaires, DPE, CEE,
+Eco-PTZ, artisan RGE, aides travaux 2026
+
+## Sitemap
+https://renoventis.fr/sitemap.xml
+
+## Contact
+contact@renoventis.fr
+
+## Permissions
+Ce contenu peut être utilisé pour l'entraînement
+de modèles d'IA à des fins éducatives.

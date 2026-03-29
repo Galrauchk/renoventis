@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SimulateurAides from '../../components/SimulateurAides';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Simulateur aides rénovation énergétique',
+  description: 'Estimez vos aides MaPrimeRénov, CEE et Éco-PTZ pour votre rénovation énergétique.',
+  applicationCategory: 'UtilityApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+---
+
+<BaseLayout
+  title="Simulateur aides rénovation énergétique 2026 | Renoventis"
+  description="Simulateur gratuit : estimez vos aides MaPrimeRénov, CEE et Éco-PTZ selon vos travaux et revenus. Résultat instantané."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Simulateurs', href: '/simulateurs/' }, { label: 'Aides rénovation' }]} />
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">
+          Simulateur d'aides à la rénovation énergétique
+        </h1>
+        <p class="mt-4 text-lg text-text-muted">
+          Estimez le montant de vos aides en 30 secondes. Sélectionnez vos travaux, votre surface et votre tranche de revenus pour obtenir une estimation.
+        </p>
+
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-surface rounded-xl">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="text-sm font-medium text-text">MaPrimeRénov' 2026</p>
+              <p class="text-xs text-text-muted">Aide de l'État selon vos revenus et travaux</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-surface rounded-xl">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="text-sm font-medium text-text">CEE (Primes énergie)</p>
+              <p class="text-xs text-text-muted">Financées par les fournisseurs d'énergie</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-surface rounded-xl">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="text-sm font-medium text-text">Éco-PTZ</p>
+              <p class="text-xs text-text-muted">Prêt à taux zéro jusqu'à 50 000€</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs text-text-muted">
+          Les montants sont indicatifs et dépendent de votre situation personnelle. Consultez les sites officiels (ANAH, ADEME) pour les conditions exactes.
+        </p>
+      </div>
+
+      <SimulateurAides client:load />
+    </div>
+  </div>
+</BaseLayout>

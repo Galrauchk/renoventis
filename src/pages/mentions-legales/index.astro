@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="Mentions légales | Renoventis"
+  description="Mentions légales du site renoventis.fr : éditeur, hébergeur, propriété intellectuelle et responsabilité."
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Mentions légales' }]} />
+
+    <h1 class="text-3xl font-heading font-extrabold text-text">Mentions légales</h1>
+
+    <div class="mt-8 prose prose-lg max-w-none">
+      <h2>Éditeur du site</h2>
+      <p>
+        Le site renoventis.fr est édité par :<br />
+        Renoventis<br />
+        Email : contact@renoventis.fr<br />
+        Directeur de la publication : Jeffrey Aldebert
+      </p>
+
+      <h2>Hébergement</h2>
+      <p>
+        Le site est hébergé par :<br />
+        Netlify, Inc.<br />
+        512 2nd Street, Suite 200<br />
+        San Francisco, CA 94107, USA
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        L'ensemble des contenus (textes, illustrations, logos, images) présents sur le site renoventis.fr sont protégés par le droit d'auteur et le droit de la propriété intellectuelle. Toute reproduction, même partielle, est interdite sans autorisation préalable.
+      </p>
+
+      <h2>Nature du site</h2>
+      <p>
+        Renoventis est un site d'information et de mise en relation. Renoventis n'est ni un artisan, ni un organisme officiel. Les montants d'aides et les prix indiqués sont donnés à titre indicatif et peuvent varier selon votre situation personnelle. Pour les montants exacts, consultez les sites officiels de l'ANAH et de l'ADEME.
+      </p>
+
+      <h2>Responsabilité</h2>
+      <p>
+        Renoventis met tout en œuvre pour assurer l'exactitude des informations publiées, mais ne saurait être tenu responsable des erreurs ou omissions, ni des résultats qui pourraient être obtenus par l'utilisation de ces informations.
+      </p>
+      <p>
+        Les liens vers des sites extérieurs sont fournis à titre informatif. Renoventis n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+      </p>
+
+      <h2>Crédits</h2>
+      <p>
+        Illustrations : créations originales Renoventis<br />
+        Typographies : Urbanist et Inter (Google Fonts, licence SIL Open Font License)
+      </p>
+    </div>
+  </div>
+</BaseLayout>

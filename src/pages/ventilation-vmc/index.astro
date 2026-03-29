@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import LeadGenForm from '../../components/LeadGenForm.astro';
+import FAQ from '../../components/FAQ.astro';
+import AideCard from '../../components/AideCard.astro';
+
+const faqItems = [
+  { question: "Quel est le prix d'une VMC double flux ?", answer: "Une VMC double flux coûte entre 4 000€ et 8 000€ pose comprise. Après aides MaPrimeRénov' et CEE, le reste à charge est de 1 500 à 5 000€." },
+  { question: "VMC simple flux ou double flux ?", answer: "La VMC double flux récupère jusqu'à 90% de la chaleur de l'air sortant, réduisant les besoins de chauffage de 15-25%. La simple flux est moins chère mais n'offre pas cette récupération." },
+  { question: "Quelles aides pour installer une VMC ?", answer: "MaPrimeRénov' offre jusqu'à 2 500€ pour une VMC double flux. Les CEE ajoutent 200-500€. L'Éco-PTZ est également accessible." },
+  { question: "Combien économise-t-on avec une VMC double flux ?", answer: "La VMC double flux permet d'économiser 15 à 25% sur le chauffage grâce à la récupération de chaleur. Pour une maison de 100m², cela représente 200 à 500€/an." },
+  { question: "La VMC double flux est-elle bruyante ?", answer: "Les modèles récents sont très silencieux (25-35 dB). L'installation d'un caisson acoustique et de gaines isolées phoniquement garantit un confort optimal." },
+  { question: "Faut-il une VMC quand on isole ?", answer: "Oui, absolument. Un logement bien isolé mais mal ventilé accumule l'humidité et les polluants. La VMC est indispensable pour garantir une bonne qualité d'air intérieur." },
+  { question: "Quel entretien pour une VMC double flux ?", answer: "Nettoyez les filtres tous les 3-6 mois et faites entretenir le système par un professionnel tous les 3 ans. Les filtres coûtent 20-40€ la paire." },
+  { question: "Peut-on installer une VMC double flux en rénovation ?", answer: "Oui, mais c'est plus complexe qu'en construction neuve. Il faut prévoir le passage des gaines (dans les combles ou faux plafonds). Un artisan spécialisé saura optimiser l'installation." },
+];
+---
+
+<BaseLayout
+  title="VMC double flux 2026 : prix, aides et installation | Renoventis"
+  description="Guide VMC double flux 2026 : prix installation, aides MaPrimeRénov, économies de chauffage, comparatif simple/double flux, artisans RGE."
+  jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation VMC', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'VMC double flux' }]} />
+
+    <div class="grid lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+          VMC double flux 2026 : prix, aides et installation
+        </h1>
+        <p class="mt-4 text-lg text-text-muted">
+          La VMC double flux assure un air sain dans votre logement tout en récupérant jusqu'à 90% de la chaleur. Un complément indispensable à l'isolation.
+        </p>
+
+        <div class="mt-12 prose prose-lg max-w-none">
+          <h2 class="text-2xl font-heading font-bold text-text">Pourquoi installer une VMC double flux ?</h2>
+          <p>La ventilation mécanique contrôlée double flux renouvelle l'air intérieur tout en récupérant la chaleur de l'air extrait. Un échangeur thermique transfère les calories de l'air vicié sortant vers l'air neuf entrant.</p>
+          <ul>
+            <li><strong>Qualité d'air :</strong> filtration des polluants, pollens et particules fines</li>
+            <li><strong>Économies :</strong> récupération de 80-90% de la chaleur</li>
+            <li><strong>Confort :</strong> air préchauffé en hiver, pas de courants d'air froid</li>
+            <li><strong>Anti-humidité :</strong> prévention moisissures et condensation</li>
+          </ul>
+
+          <h2 class="text-2xl font-heading font-bold text-text">Comparatif VMC simple flux vs double flux</h2>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-primary text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Critère</th>
+                <th class="px-4 py-3 text-left font-semibold">Simple flux</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Double flux</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100">
+                <td class="px-4 py-3 font-medium">Prix posé</td>
+                <td class="px-4 py-3">500-1 500€</td>
+                <td class="px-4 py-3">4 000-8 000€</td>
+              </tr>
+              <tr class="border-b border-gray-100 bg-surface">
+                <td class="px-4 py-3 font-medium">Récupération chaleur</td>
+                <td class="px-4 py-3">0%</td>
+                <td class="px-4 py-3 text-accent font-semibold">80-90%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-4 py-3 font-medium">Économies chauffage</td>
+                <td class="px-4 py-3">0%</td>
+                <td class="px-4 py-3 text-accent font-semibold">15-25%</td>
+              </tr>
+              <tr class="border-b border-gray-100 bg-surface">
+                <td class="px-4 py-3 font-medium">Filtration air</td>
+                <td class="px-4 py-3">Non</td>
+                <td class="px-4 py-3 text-accent font-semibold">Oui (F7/G4)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">MaPrimeRénov'</td>
+                <td class="px-4 py-3">Non éligible</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">Jusqu'à 2 500€</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides disponibles</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <AideCard title="MaPrimeRénov'" montant="Jusqu'à 2 500€" description="Pour une VMC double flux." conditions="Artisan RGE obligatoire" href="/aides-renovation/" />
+            <AideCard title="CEE" montant="200 à 500€" description="Prime énergie cumulable." conditions="Sans condition de revenus" href="/guides/cee-certificats-energie/" />
+          </div>
+        </div>
+
+        <FAQ items={faqItems} />
+      </div>
+
+      <aside class="lg:col-span-1">
+        <div class="sticky top-24 space-y-6">
+          <LeadGenForm travaux="VMC double flux" title="Devis VMC gratuits" />
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

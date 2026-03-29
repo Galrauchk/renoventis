@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+  <defs>
+    <linearGradient id="logoGradL" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#95D5B2"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2,4)">
+    <path d="M20 8L4 22V40H16V30H24V40H36V22L20 8Z" fill="url(#logoGradL)"/>
+    <path d="M0 22L20 4L40 22L37 25L20 10L3 25Z" fill="url(#logoGradL)"/>
+    <path d="M30 14C34 10 38 12 38 12C38 12 40 16 36 20C34 22 31 22 29 21" stroke="#95D5B2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M36 20C36 20 33 19 32 17" stroke="#95D5B2" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="52" y="36" font-family="'Urbanist', sans-serif" font-weight="700" font-size="30" fill="#FFFFFF">Renoventis</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
+  <rect width="400" height="350" fill="#F0FAF4" rx="12"/>
+  <!-- Worker figure -->
+  <g transform="translate(150,40)">
+    <!-- Hard hat -->
+    <ellipse cx="50" cy="30" rx="35" ry="10" fill="#F4A261"/>
+    <path d="M20 30C20 10 80 10 80 30" fill="#F4A261"/>
+    <rect x="45" y="5" width="10" height="10" rx="5" fill="#F4A261"/>
+    <!-- Head -->
+    <circle cx="50" cy="50" r="22" fill="#D4A574"/>
+    <!-- Eyes -->
+    <circle cx="42" cy="47" r="2.5" fill="#1B4332"/>
+    <circle cx="58" cy="47" r="2.5" fill="#1B4332"/>
+    <!-- Smile -->
+    <path d="M42 56C44 60 56 60 58 56" stroke="#1B4332" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Body / vest -->
+    <path d="M25 75L75 75L80 170L20 170Z" fill="#52B788"/>
+    <!-- Vest details -->
+    <line x1="50" y1="75" x2="50" y2="170" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
+    <rect x="30" y="90" width="15" height="10" rx="2" fill="#1B4332" opacity="0.2"/>
+    <!-- Arms -->
+    <path d="M25 80L0 130L10 135L30 95" fill="#52B788"/>
+    <path d="M75 80L100 130L90 135L70 95" fill="#52B788"/>
+    <!-- Hands -->
+    <circle cx="5" cy="132" r="7" fill="#D4A574"/>
+    <circle cx="95" cy="132" r="7" fill="#D4A574"/>
+    <!-- Tool in right hand -->
+    <rect x="90" y="115" width="4" height="30" rx="1" fill="#6B7280" transform="rotate(15,92,130)"/>
+    <rect x="85" y="110" width="14" height="8" rx="2" fill="#6B7280" transform="rotate(15,92,114)"/>
+    <!-- Legs -->
+    <rect x="28" y="170" width="18" height="60" rx="4" fill="#1B4332"/>
+    <rect x="54" y="170" width="18" height="60" rx="4" fill="#1B4332"/>
+    <!-- Boots -->
+    <path d="M25 225L48 225L48 235L22 235Z" rx="3" fill="#2D2D2D"/>
+    <path d="M52 225L75 225L78 235L52 235Z" rx="3" fill="#2D2D2D"/>
+  </g>
+  <!-- RGE Badge -->
+  <g transform="translate(270,80)">
+    <circle cx="45" cy="45" r="42" fill="white" stroke="#52B788" stroke-width="3"/>
+    <circle cx="45" cy="45" r="35" fill="#1B4332"/>
+    <text x="45" y="38" font-family="Urbanist,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">RGE</text>
+    <text x="45" y="53" font-family="Inter,sans-serif" font-size="8" fill="#52B788" text-anchor="middle">Reconnu</text>
+    <text x="45" y="63" font-family="Inter,sans-serif" font-size="8" fill="#52B788" text-anchor="middle">Garant</text>
+    <!-- Check mark -->
+    <path d="M30 72L40 82L62 55" stroke="#52B788" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0) scale(0.5)" />
+  </g>
+  <!-- Trust indicators -->
+  <g transform="translate(50,290)">
+    <rect x="0" y="0" width="300" height="35" rx="8" fill="#1B4332"/>
+    <text x="150" y="14" font-family="Inter,sans-serif" font-size="10" fill="#52B788" text-anchor="middle">✓ Certifié  ·  ✓ Assuré  ·  ✓ Qualifié</text>
+    <text x="150" y="28" font-family="Inter,sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.8">Artisans vérifiés et labellisés RGE</text>
+  </g>
+</svg>

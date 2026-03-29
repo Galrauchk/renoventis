@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="À propos de Renoventis | Renoventis"
+  description="Renoventis est un media indépendant spécialisé dans la rénovation énergétique. Notre mission : rendre la rénovation accessible à tous."
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]} />
+
+    <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">À propos de Renoventis</h1>
+
+    <div class="mt-8 prose prose-lg max-w-none">
+      <p>
+        <strong>Renoventis</strong> est un media indépendant dédié à la rénovation énergétique en France. Notre mission est de rendre la rénovation accessible à tous en fournissant des informations fiables, actualisées et faciles à comprendre.
+      </p>
+
+      <h2>Notre mission</h2>
+      <p>
+        Face à l'urgence climatique et à la hausse des prix de l'énergie, la rénovation énergétique des logements est devenue une priorité nationale. Pourtant, beaucoup de Français ne savent pas par où commencer, quelles aides existent ou comment trouver un artisan fiable.
+      </p>
+      <p>
+        Renoventis comble ce manque en proposant :
+      </p>
+      <ul>
+        <li><strong>Des guides pratiques</strong> rédigés à partir de sources officielles (ANAH, ADEME)</li>
+        <li><strong>Un simulateur d'aides</strong> pour estimer rapidement vos droits</li>
+        <li><strong>Un service gratuit de mise en relation</strong> avec des artisans RGE certifiés</li>
+      </ul>
+
+      <h2>Nos valeurs</h2>
+      <ul>
+        <li><strong>Indépendance :</strong> nos contenus sont objectifs et non sponsorisés par des marques</li>
+        <li><strong>Fiabilité :</strong> nos informations sont sourcées et régulièrement mises à jour</li>
+        <li><strong>Accessibilité :</strong> nous vulgarisons un sujet technique pour le rendre compréhensible</li>
+        <li><strong>Gratuité :</strong> tous nos services (guides, simulateur, devis) sont 100% gratuits pour les particuliers</li>
+      </ul>
+
+      <h2>Notre modèle</h2>
+      <p>
+        Renoventis se rémunère via la mise en relation entre particuliers et artisans RGE. Ce modèle nous permet de proposer tous nos contenus et outils gratuitement. Les artisans partenaires sont sélectionnés sur la base de leur certification RGE et de la qualité de leurs prestations.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Pour toute question, suggestion ou partenariat, contactez-nous à l'adresse <strong>contact@renoventis.fr</strong> ou via notre <a href="/contact/">formulaire de contact</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

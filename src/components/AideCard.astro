@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  montant: string;
+  description: string;
+  conditions: string;
+  href?: string;
+}
+
+const { title, montant, description, conditions, href } = Astro.props;
+---
+
+<div class="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-lg transition-shadow">
+  <h3 class="text-lg font-heading font-bold text-text">{title}</h3>
+  <p class="mt-2 text-2xl font-heading font-bold text-accent-warm">{montant}</p>
+  <p class="mt-2 text-sm text-text-muted">{description}</p>
+  <p class="mt-3 text-xs text-text-muted border-t border-gray-100 pt-3">{conditions}</p>
+  {href && (
+    <a href={href} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:text-accent transition-colors">
+      En savoir plus
+      <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  )}
+</div>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="500">
+      <stop offset="0%" stop-color="#F0FAF4"/>
+      <stop offset="100%" stop-color="#D8F3DC"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8F5E9"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="500" fill="url(#skyGrad)" rx="16"/>
+  <!-- Ground -->
+  <ellipse cx="300" cy="440" rx="260" ry="30" fill="#52B788" opacity="0.2"/>
+  <!-- House body - isometric style -->
+  <g transform="translate(140,120)">
+    <!-- Left wall -->
+    <path d="M20 180L160 130V320L20 370Z" fill="url(#wallGrad)" stroke="#1B4332" stroke-width="2"/>
+    <!-- Right wall -->
+    <path d="M160 130L320 180V370L160 320Z" fill="#E8F5E9" stroke="#1B4332" stroke-width="2"/>
+    <!-- Roof left -->
+    <path d="M0 180L160 80L160 130L20 180Z" fill="url(#roofGrad)"/>
+    <!-- Roof right -->
+    <path d="M160 80L340 180L320 180L160 130Z" fill="#2D6A4F"/>
+    <!-- Door -->
+    <rect x="145" y="250" width="30" height="55" rx="3" fill="#1B4332"/>
+    <circle cx="170" cy="280" r="2.5" fill="#F4A261"/>
+    <!-- Windows -->
+    <rect x="60" y="220" width="40" height="35" rx="3" fill="#B7E4C7" stroke="#1B4332" stroke-width="1.5"/>
+    <line x1="80" y1="220" x2="80" y2="255" stroke="#1B4332" stroke-width="1"/>
+    <line x1="60" y1="237" x2="100" y2="237" stroke="#1B4332" stroke-width="1"/>
+    <rect x="220" y="230" width="40" height="35" rx="3" fill="#B7E4C7" stroke="#1B4332" stroke-width="1.5"/>
+    <line x1="240" y1="230" x2="240" y2="265" stroke="#1B4332" stroke-width="1"/>
+    <line x1="220" y1="247" x2="260" y2="247" stroke="#1B4332" stroke-width="1"/>
+    <!-- Solar panels on roof -->
+    <g transform="translate(180,95) rotate(-15)">
+      <rect x="0" y="0" width="35" height="25" rx="2" fill="#1B4332" stroke="#52B788" stroke-width="1"/>
+      <line x1="12" y1="0" x2="12" y2="25" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="24" y1="0" x2="24" y2="25" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="0" y1="8" x2="35" y2="8" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="0" y1="17" x2="35" y2="17" stroke="#52B788" stroke-width="0.5"/>
+    </g>
+    <g transform="translate(220,88) rotate(-15)">
+      <rect x="0" y="0" width="35" height="25" rx="2" fill="#1B4332" stroke="#52B788" stroke-width="1"/>
+      <line x1="12" y1="0" x2="12" y2="25" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="24" y1="0" x2="24" y2="25" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="0" y1="8" x2="35" y2="8" stroke="#52B788" stroke-width="0.5"/>
+      <line x1="0" y1="17" x2="35" y2="17" stroke="#52B788" stroke-width="0.5"/>
+    </g>
+  </g>
+  <!-- DPE indicator -->
+  <g transform="translate(460,140)">
+    <text x="0" y="0" font-family="Urbanist,sans-serif" font-weight="700" font-size="14" fill="#1B4332">DPE</text>
+    <rect x="0" y="10" width="60" height="14" rx="2" fill="#22C55E"/><text x="4" y="22" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">A</text>
+    <rect x="0" y="28" width="68" height="14" rx="2" fill="#84CC16"/><text x="4" y="40" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">B</text>
+    <rect x="0" y="46" width="76" height="14" rx="2" fill="#EAB308"/><text x="4" y="58" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">C</text>
+    <rect x="0" y="64" width="84" height="14" rx="2" fill="#F59E0B"/><text x="4" y="76" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">D</text>
+    <rect x="0" y="82" width="92" height="14" rx="2" fill="#F4A261"/><text x="4" y="94" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">E</text>
+    <rect x="0" y="100" width="100" height="14" rx="2" fill="#EF4444"/><text x="4" y="112" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">F</text>
+    <rect x="0" y="118" width="108" height="14" rx="2" fill="#DC2626"/><text x="4" y="130" font-family="Inter,sans-serif" font-size="10" fill="white" font-weight="600">G</text>
+    <!-- Arrow pointing from G to B -->
+    <path d="M115 125L115 35L108 42M115 35L122 42" stroke="#52B788" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="80" cy="70" r="30" fill="#F4A261" opacity="0.3"/>
+  <circle cx="80" cy="70" r="20" fill="#F4A261" opacity="0.5"/>
+</svg>

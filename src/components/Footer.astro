@@ -1,0 +1,82 @@
+---
+const travauxLinks = [
+  { href: '/isolation/', label: 'Isolation thermique' },
+  { href: '/pompe-a-chaleur/', label: 'Pompe à chaleur' },
+  { href: '/panneaux-solaires/', label: 'Panneaux solaires' },
+  { href: '/chaudiere-biomasse/', label: 'Chaudière biomasse' },
+  { href: '/ventilation-vmc/', label: 'VMC double flux' },
+];
+
+const aidesLinks = [
+  { href: '/aides-renovation/', label: 'Toutes les aides' },
+  { href: '/guides/maprimrenov-2026-guide/', label: "MaPrimeRénov' 2026" },
+  { href: '/guides/cee-certificats-energie/', label: 'Certificats CEE' },
+  { href: '/guides/eco-ptz-conditions-2026/', label: 'Éco-PTZ' },
+];
+
+const outilsLinks = [
+  { href: '/simulateurs/aides-renovation/', label: 'Simulateur aides' },
+  { href: '/devis/', label: 'Demander un devis' },
+  { href: '/guides/', label: 'Tous les guides' },
+];
+---
+
+<footer class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Brand -->
+      <div>
+        <img src="/logo-renoventis-light.svg" alt="Renoventis" class="h-8 mb-4" />
+        <p class="text-white/70 text-sm leading-relaxed">
+          Rénovez mieux, dépensez moins. Guides pratiques et mise en relation avec des artisans RGE certifiés.
+        </p>
+      </div>
+
+      <!-- Travaux -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Travaux</h3>
+        <ul class="space-y-2.5">
+          {travauxLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Aides -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Aides</h3>
+        <ul class="space-y-2.5">
+          {aidesLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Outils -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Outils</h3>
+        <ul class="space-y-2.5">
+          {outilsLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Disclaimer + legal -->
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <p class="text-xs text-white/50 leading-relaxed mb-4">
+        Renoventis est un site de mise en relation entre particuliers et artisans certifiés RGE. Renoventis n'est ni un artisan, ni un organisme officiel. Les montants d'aides indiqués sont donnés à titre indicatif et dépendent de votre situation personnelle. Consultez les sites officiels (ANAH, ADEME) pour les conditions exactes.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-white/40">&copy; {new Date().getFullYear()} Renoventis. Tous droits réservés.</p>
+        <div class="flex items-center gap-4">
+          <a href="/mentions-legales/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Mentions légales</a>
+          <a href="/politique-confidentialite/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Politique de confidentialité</a>
+          <a href="/contact/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Contact</a>
+          <a href="/a-propos/" class="text-xs text-white/40 hover:text-white/60 transition-colors">À propos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

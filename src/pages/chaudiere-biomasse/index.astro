@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import LeadGenForm from '../../components/LeadGenForm.astro';
+import FAQ from '../../components/FAQ.astro';
+import AideCard from '../../components/AideCard.astro';
+
+const faqItems = [
+  { question: "Quel est le prix d'une chaudière à granulés ?", answer: "Une chaudière à granulés coûte entre 12 000€ et 20 000€ pose comprise, incluant le silo de stockage. Après aides (MaPrimeRénov' + CEE), le reste à charge descend à 4 000-10 000€." },
+  { question: "Quelles aides pour une chaudière biomasse en 2026 ?", answer: "MaPrimeRénov' offre jusqu'à 5 000€ pour une chaudière à granulés. Les CEE ajoutent 2 000 à 3 500€. L'Éco-PTZ finance le reste à taux zéro." },
+  { question: "Les granulés de bois sont-ils économiques ?", answer: "Oui, le granulé est le combustible le moins cher au kWh après le bois bûche. Le coût annuel de chauffage est de 800-1 500€ pour une maison de 100m², soit 30-50% de moins que le gaz." },
+  { question: "Quel espace faut-il pour le silo à granulés ?", answer: "Un silo de stockage nécessite 2 à 4m² au sol. Il peut être installé dans une pièce attenante, un garage ou en extérieur. L'alimentation automatique offre un confort d'utilisation optimal." },
+  { question: "Combien de granulés consomme-t-on par an ?", answer: "Une maison de 100m² consomme en moyenne 3 à 5 tonnes de granulés par an, soit 900 à 1 500€ de combustible au prix actuel d'environ 300€/tonne." },
+  { question: "La chaudière biomasse est-elle écologique ?", answer: "Oui, le bilan carbone est quasi-neutre car le CO2 émis lors de la combustion est compensé par celui absorbé durant la croissance de l'arbre. C'est une énergie renouvelable labellisée." },
+  { question: "Quel entretien pour une chaudière à granulés ?", answer: "L'entretien annuel par un professionnel est obligatoire (150-250€). Le vidage du cendrier est nécessaire toutes les 2-4 semaines. Les chaudières modernes disposent d'un décendrage automatique." },
+  { question: "Peut-on remplacer une chaudière fioul par une chaudière granulés ?", answer: "Oui, c'est même fortement encouragé et aidé. Le raccordement au réseau de chauffage existant est généralement compatible. MaPrimeRénov' est bonifiée en cas de remplacement d'une chaudière fioul." },
+];
+---
+
+<BaseLayout
+  title="Chaudière à granulés 2026 : prix, aides MaPrimeRénov | Renoventis"
+  description="Guide chaudière à granulés 2026 : prix installation, aides MaPrimeRénov jusqu'à 5000€, économies vs gaz/fioul, artisans RGE."
+  jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation chaudière biomasse', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Chaudière biomasse' }]} />
+
+    <div class="grid lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+          Chaudière à granulés 2026 : prix, aides MaPrimeRénov'
+        </h1>
+        <p class="mt-4 text-lg text-text-muted">
+          La chaudière à granulés (ou pellets) est une alternative économique et écologique au gaz et au fioul. Avec MaPrimeRénov' 2026, elle est accessible à tous les budgets.
+        </p>
+
+        <div class="mt-12 prose prose-lg max-w-none">
+          <h2 class="text-2xl font-heading font-bold text-text">Pourquoi choisir une chaudière à granulés ?</h2>
+          <p>La chaudière à granulés de bois offre un rendement supérieur à 90% et utilise un combustible renouvelable. Elle remplace avantageusement les chaudières gaz ou fioul vieillissantes.</p>
+          <ul>
+            <li><strong>Rendement élevé :</strong> 90 à 95% pour les modèles à condensation</li>
+            <li><strong>Combustible économique :</strong> 30 à 50% moins cher que le gaz</li>
+            <li><strong>Énergie renouvelable :</strong> bilan carbone quasi-neutre</li>
+            <li><strong>Confort d'utilisation :</strong> alimentation et décendrage automatiques</li>
+            <li><strong>Compatible :</strong> avec les radiateurs et planchers chauffants existants</li>
+          </ul>
+
+          <h2 class="text-2xl font-heading font-bold text-text">Prix d'une chaudière à granulés</h2>
+          <p>Le prix d'une chaudière à granulés varie selon la puissance, le type (standard ou condensation) et les options (silo intégré ou séparé).</p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-primary text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Type</th>
+                <th class="px-4 py-3 text-left font-semibold">Prix posé</th>
+                <th class="px-4 py-3 text-left font-semibold">Rendement</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Aide max</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100">
+                <td class="px-4 py-3 font-medium">Standard</td>
+                <td class="px-4 py-3">12 000-16 000€</td>
+                <td class="px-4 py-3">90-92%</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
+              </tr>
+              <tr class="border-b border-gray-100 bg-surface">
+                <td class="px-4 py-3 font-medium">Condensation</td>
+                <td class="px-4 py-3">16 000-22 000€</td>
+                <td class="px-4 py-3">95-105%</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Bûches</td>
+                <td class="px-4 py-3">8 000-14 000€</td>
+                <td class="px-4 py-3">80-90%</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">4 000€</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides disponibles</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <AideCard title="MaPrimeRénov'" montant="Jusqu'à 5 000€" description="Pour les revenus très modestes à intermédiaires." conditions="Artisan RGE Qualibois obligatoire" href="/aides-renovation/" />
+            <AideCard title="CEE" montant="2 000 à 3 500€" description="Prime énergie cumulable." conditions="Remplacement d'une chaudière existante" href="/guides/cee-certificats-energie/" />
+          </div>
+        </div>
+
+        <FAQ items={faqItems} />
+      </div>
+
+      <aside class="lg:col-span-1">
+        <div class="sticky top-24 space-y-6">
+          <LeadGenForm travaux="Chaudière biomasse" title="Devis chaudière gratuits" />
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

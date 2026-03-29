@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import LeadGenForm from '../../components/LeadGenForm.astro';
+import FAQ from '../../components/FAQ.astro';
+import AideCard from '../../components/AideCard.astro';
+
+const faqItems = [
+  { question: "Quel est le prix d'une pompe à chaleur air/eau ?", answer: "Le prix d'une PAC air/eau varie entre 10 000€ et 18 000€ pose comprise. Après déduction des aides (MaPrimeRénov' + CEE), le reste à charge peut descendre à 4 000-8 000€." },
+  { question: "Quelles aides pour installer une pompe à chaleur en 2026 ?", answer: "En 2026, MaPrimeRénov' offre jusqu'à 5 000€ pour une PAC air/eau. Les CEE ajoutent 2 000 à 4 000€. L'Éco-PTZ peut financer le reste à charge à taux zéro." },
+  { question: "Une PAC air/eau fonctionne-t-elle par grand froid ?", answer: "Les PAC modernes fonctionnent jusqu'à -20°C grâce à la technologie Inverter. Le COP diminue avec le froid, mais la PAC reste efficace. Un appoint électrique peut compléter par grand froid." },
+  { question: "Quelle est la durée de vie d'une pompe à chaleur ?", answer: "Une PAC bien entretenue dure 15 à 20 ans. L'entretien annuel obligatoire (environ 200€/an) garantit ses performances et sa longévité." },
+  { question: "PAC air/air ou air/eau : que choisir ?", answer: "La PAC air/eau est plus polyvalente (chauffage + eau chaude) et éligible à plus d'aides. La PAC air/air (climatisation réversible) est moins chère mais produit uniquement du chauffage/climatisation." },
+  { question: "Quel COP pour une bonne pompe à chaleur ?", answer: "Un COP de 3 à 4 est considéré comme bon : pour 1 kWh d'électricité consommé, la PAC produit 3 à 4 kWh de chaleur. Les meilleurs modèles atteignent un COP de 5." },
+  { question: "Faut-il un artisan RGE pour installer une PAC ?", answer: "Oui, un artisan certifié RGE QualiPAC est obligatoire pour bénéficier des aides MaPrimeRénov' et CEE." },
+  { question: "Combien économise-t-on avec une pompe à chaleur ?", answer: "Une PAC air/eau permet d'économiser 50 à 70% sur la facture de chauffage par rapport à un chauffage électrique, et 30 à 50% par rapport au gaz." },
+];
+---
+
+<BaseLayout
+  title="Pompe à chaleur 2026 : prix, aides et installation | Renoventis"
+  description="Guide complet pompe à chaleur 2026 : prix PAC air/eau et air/air, aides MaPrimeRénov jusqu'à 5000€, COP, économies et artisans RGE."
+  jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation pompe à chaleur', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Pompe à chaleur' }]} />
+
+    <div class="grid lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+          Pompe à chaleur 2026 : prix, aides et installation
+        </h1>
+        <p class="mt-4 text-lg text-text-muted">
+          La pompe à chaleur est la solution de chauffage la plus efficace et la plus aidée en 2026. Jusqu'à 5 000€ de MaPrimeRénov' et 4 000€ de CEE.
+        </p>
+
+        <img src="/illustrations/pompe-chaleur.svg" alt="Pompe à chaleur air/eau" class="mt-8 w-full max-w-xl rounded-2xl" loading="lazy" />
+
+        <div class="mt-12 prose prose-lg max-w-none">
+          <h2 class="text-2xl font-heading font-bold text-text">Qu'est-ce qu'une pompe à chaleur ?</h2>
+          <p>La pompe à chaleur (PAC) est un système de chauffage qui capte les calories présentes dans l'air extérieur, l'eau ou le sol pour les restituer sous forme de chaleur dans votre logement. Son rendement exceptionnel (COP de 3 à 5) en fait la solution la plus économique à l'usage.</p>
+
+          <h2 class="text-2xl font-heading font-bold text-text">Les types de pompes à chaleur</h2>
+
+          <h3 class="text-xl font-heading font-bold text-text">PAC air/eau</h3>
+          <p>La plus populaire et la plus aidée. Elle capte les calories de l'air extérieur pour chauffer l'eau du circuit de chauffage central et produire l'eau chaude sanitaire. Compatible avec des radiateurs ou un plancher chauffant.</p>
+
+          <h3 class="text-xl font-heading font-bold text-text">PAC air/air</h3>
+          <p>Aussi appelée climatisation réversible. Elle chauffe et rafraîchit votre logement mais ne produit pas d'eau chaude. Moins aidée que la PAC air/eau.</p>
+
+          <h3 class="text-xl font-heading font-bold text-text">PAC géothermique</h3>
+          <p>La plus performante (COP jusqu'à 5) mais la plus coûteuse. Elle capte la chaleur du sol via des capteurs enterrés. Idéale pour les grands terrains.</p>
+        </div>
+
+        <!-- Tableau comparatif -->
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-primary text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Type PAC</th>
+                <th class="px-4 py-3 text-left font-semibold">Prix posé</th>
+                <th class="px-4 py-3 text-left font-semibold">COP moyen</th>
+                <th class="px-4 py-3 text-left font-semibold">MaPrimeRénov'</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Économies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100">
+                <td class="px-4 py-3 font-medium">Air/eau</td>
+                <td class="px-4 py-3">10 000-18 000€</td>
+                <td class="px-4 py-3">3-4</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
+                <td class="px-4 py-3">50-70%</td>
+              </tr>
+              <tr class="border-b border-gray-100 bg-surface">
+                <td class="px-4 py-3 font-medium">Air/air</td>
+                <td class="px-4 py-3">5 000-10 000€</td>
+                <td class="px-4 py-3">3-3.5</td>
+                <td class="px-4 py-3 text-text-muted">Non éligible</td>
+                <td class="px-4 py-3">30-50%</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Géothermique</td>
+                <td class="px-4 py-3">20 000-40 000€</td>
+                <td class="px-4 py-3">4-5</td>
+                <td class="px-4 py-3 text-accent-warm font-semibold">10 000€</td>
+                <td class="px-4 py-3">60-75%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides pour l'installation d'une PAC</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <AideCard title="MaPrimeRénov'" montant="Jusqu'à 5 000€" description="Pour une PAC air/eau (revenus modestes)." conditions="Artisan RGE QualiPAC obligatoire" href="/aides-renovation/" />
+            <AideCard title="CEE" montant="2 000 à 4 000€" description="Prime énergie cumulable." conditions="Remplacement d'une chaudière fossile" href="/guides/cee-certificats-energie/" />
+          </div>
+        </div>
+
+        <FAQ items={faqItems} />
+      </div>
+
+      <aside class="lg:col-span-1">
+        <div class="sticky top-24 space-y-6">
+          <LeadGenForm travaux="Pompe à chaleur" title="Devis PAC gratuits" />
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

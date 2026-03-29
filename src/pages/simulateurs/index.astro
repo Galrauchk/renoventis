@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="Simulateurs rénovation énergétique 2026 | Renoventis"
+  description="Simulateurs gratuits : estimez vos aides MaPrimeRénov, CEE et Éco-PTZ pour votre rénovation énergétique en 2026."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Simulateurs' }]} />
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">Simulateurs rénovation énergétique</h1>
+      <p class="mt-4 text-lg text-text-muted">Estimez vos aides et le coût de vos travaux en quelques clics.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <a href="/simulateurs/aides-renovation/" class="group bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 bg-accent-warm/10 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-accent-warm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h2 class="text-xl font-heading font-bold text-text group-hover:text-primary transition-colors">Simulateur d'aides</h2>
+        <p class="mt-2 text-sm text-text-muted">Estimez le montant de vos aides MaPrimeRénov', CEE et Éco-PTZ en 30 secondes.</p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-primary">Simuler mes aides →</span>
+      </a>
+
+      <a href="/devis/" class="group bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h2 class="text-xl font-heading font-bold text-text group-hover:text-primary transition-colors">Demande de devis</h2>
+        <p class="mt-2 text-sm text-text-muted">Recevez 3 devis gratuits d'artisans RGE certifiés de votre région sous 48h.</p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-primary">Demander des devis →</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

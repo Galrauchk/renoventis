@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
+  <rect width="400" height="350" fill="#F0FAF4" rx="12"/>
+  <!-- Outdoor unit -->
+  <g transform="translate(40,100)">
+    <rect x="0" y="0" width="120" height="100" rx="8" fill="white" stroke="#1B4332" stroke-width="2"/>
+    <text x="60" y="-10" font-family="Inter,sans-serif" font-size="11" fill="#1B4332" text-anchor="middle" font-weight="600">Unité extérieure</text>
+    <!-- Fan -->
+    <circle cx="60" cy="45" r="30" fill="none" stroke="#52B788" stroke-width="2"/>
+    <path d="M60 20C60 20 75 35 60 45C45 35 60 20 60 20Z" fill="#52B788" opacity="0.5"/>
+    <path d="M60 70C60 70 45 55 60 45C75 55 60 70 60 70Z" fill="#52B788" opacity="0.5"/>
+    <path d="M35 45C35 45 50 30 60 45C50 60 35 45 35 45Z" fill="#52B788" opacity="0.5"/>
+    <path d="M85 45C85 45 70 60 60 45C70 30 85 45 85 45Z" fill="#52B788" opacity="0.5"/>
+    <circle cx="60" cy="45" r="5" fill="#1B4332"/>
+    <!-- Grille -->
+    <line x1="10" y1="85" x2="110" y2="85" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
+    <line x1="10" y1="90" x2="110" y2="90" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
+    <!-- Air arrows -->
+    <path d="M-15 30L-5 45L-15 60" stroke="#52B788" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M-25 35L-15 45L-25 55" stroke="#52B788" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+  <!-- Connection pipes -->
+  <path d="M160 150L200 150L200 160L240 160" stroke="#F4A261" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M160 165L200 165L200 175L240 175" stroke="#52B788" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="200" y="145" font-family="Inter,sans-serif" font-size="9" fill="#F4A261" text-anchor="middle">chaud</text>
+  <text x="200" y="192" font-family="Inter,sans-serif" font-size="9" fill="#52B788" text-anchor="middle">froid</text>
+  <!-- Indoor unit / house -->
+  <g transform="translate(240,80)">
+    <rect x="0" y="30" width="130" height="140" rx="4" fill="white" stroke="#1B4332" stroke-width="2"/>
+    <path d="M-5 30L65 0L135 30Z" fill="#1B4332"/>
+    <text x="65" y="55" font-family="Inter,sans-serif" font-size="11" fill="#1B4332" text-anchor="middle" font-weight="600">Intérieur</text>
+    <!-- Radiators -->
+    <rect x="20" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
+    <rect x="32" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
+    <rect x="44" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
+    <!-- Heat waves -->
+    <path d="M70 110C73 105 77 110 80 105" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M70 120C73 115 77 120 80 115" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M70 130C73 125 77 130 80 125" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  <!-- COP indicator -->
+  <g transform="translate(150,270)">
+    <rect x="0" y="0" width="100" height="40" rx="8" fill="#1B4332"/>
+    <text x="50" y="17" font-family="Urbanist,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="600">COP jusqu'à</text>
+    <text x="50" y="34" font-family="Urbanist,sans-serif" font-size="16" fill="#52B788" text-anchor="middle" font-weight="700">5.0</text>
+  </g>
+</svg>

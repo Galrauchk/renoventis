@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HubCard from '../components/HubCard.astro';
+import AideCard from '../components/AideCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import SimulateurAides from '../components/SimulateurAides';
+import { getCollection } from 'astro:content';
+
+const guides = await getCollection('guides');
+const recentGuides = guides.slice(0, 6);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Renoventis',
+    url: 'https://renoventis.fr',
+    logo: 'https://renoventis.fr/logo-renoventis.svg',
+    description: 'Media rénovation énergétique — Guides, aides et mise en relation artisans RGE',
+    contactPoint: { '@type': 'ContactPoint', email: 'contact@renoventis.fr', contactType: 'customer service' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Renoventis',
+    url: 'https://renoventis.fr',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://renoventis.fr/guides/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  },
+];
+
+const travaux = [
+  { title: 'Isolation thermique', description: 'Combles, murs, sol et fenêtres — réduisez les déperditions de chaleur', href: '/isolation/', illustration: '/illustrations/isolation.svg', aideMontant: '75€/m²' },
+  { title: 'Pompe à chaleur', description: 'PAC air/eau, air/air et géothermique — chauffage performant', href: '/pompe-a-chaleur/', illustration: '/illustrations/pompe-chaleur.svg', aideMontant: '5 000€' },
+  { title: 'Panneaux solaires', description: 'Photovoltaïque et autoconsommation — produisez votre énergie', href: '/panneaux-solaires/', illustration: '/illustrations/panneaux-solaires.svg', aideMontant: '2 340€' },
+  { title: 'Chaudière biomasse', description: 'Granulés et bûches — un chauffage économique et écologique', href: '/chaudiere-biomasse/', illustration: '/illustrations/artisan-rge.svg', aideMontant: '5 000€' },
+  { title: 'VMC double flux', description: 'Ventilation performante pour un air sain et des économies', href: '/ventilation-vmc/', illustration: '/illustrations/pompe-chaleur.svg', aideMontant: '2 500€' },
+  { title: 'Améliorer son DPE', description: 'Passez de G à B — les travaux les plus rentables', href: '/guides/dpe-logement-ameliorer/', illustration: '/illustrations/dpe-amelioration.svg', aideMontant: '70% d\'aides' },
+];
+---
+
+<BaseLayout
+  title="Rénovation énergétique 2026 : aides, devis et artisans RGE | Renoventis"
+  description="Renoventis vous accompagne dans votre rénovation énergétique : guides MaPrimeRénov 2026, simulateur d'aides, devis gratuits d'artisans RGE certifiés."
+  jsonLd={jsonLd}
+>
+  <!-- HERO -->
+  <section class="relative bg-gradient-to-br from-primary to-dark overflow-hidden">
+    <!-- Geometric overlay -->
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hexagons" width="56" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+            <path d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hexagons)"/>
+      </svg>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <!-- Badge urgence -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent-warm/20 border border-accent-warm/30 rounded-full mb-6">
+            <span class="w-2 h-2 bg-accent-warm rounded-full animate-pulse"></span>
+            <span class="text-sm font-medium text-accent-warm">MaPrimeRénov' disponible en 2026</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Rénovez votre logement, réduisez vos factures jusqu'à <span class="text-accent">70%</span>
+          </h1>
+
+          <p class="mt-6 text-lg text-white/80 max-w-xl">
+            Profitez des aides MaPrimeRénov', CEE et Éco-PTZ pour financer vos travaux. Mise en relation gratuite avec des artisans RGE certifiés.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="/devis/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-xl transition-colors shadow-xl shadow-amber-500/25">
+              Obtenir des devis gratuits
+            </a>
+            <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:bg-white/10 rounded-xl transition-colors">
+              Calculer mes aides
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-12 grid grid-cols-3 gap-6">
+            <div>
+              <p class="text-2xl md:text-3xl font-heading font-bold text-white">5M+</p>
+              <p class="text-sm text-white/60">logements rénovés</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-heading font-bold text-accent">70%</p>
+              <p class="text-sm text-white/60">d'aides possibles</p>
+            </div>
+            <div>
+              <p class="text-2xl md:text-3xl font-heading font-bold text-accent-warm">3</p>
+              <p class="text-sm text-white/60">devis gratuits</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:block">
+          <img src="/illustrations/hero-maison.svg" alt="Maison rénovée avec panneaux solaires et bon DPE" class="w-full max-w-lg mx-auto drop-shadow-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULATEUR -->
+  <section class="py-16 lg:py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">
+            Estimez vos aides en <span class="text-accent">30 secondes</span>
+          </h2>
+          <p class="mt-4 text-text-muted max-w-lg">
+            Sélectionnez vos travaux et votre tranche de revenus pour obtenir une estimation de vos aides MaPrimeRénov', CEE et Éco-PTZ.
+          </p>
+          <img src="/illustrations/economies.svg" alt="Économies sur les factures" class="mt-8 w-full max-w-sm hidden lg:block" loading="lazy" />
+        </div>
+        <SimulateurAides client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVAUX -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Les travaux de rénovation énergétique</h2>
+        <p class="mt-4 text-text-muted">Découvrez les travaux les plus efficaces pour améliorer la performance énergétique de votre logement.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {travaux.map(t => <HubCard {...t} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- AIDES -->
+  <section class="py-16 lg:py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Les aides disponibles en 2026</h2>
+        <p class="mt-4 text-text-muted">Cumulez les aides pour financer jusqu'à 90% de vos travaux de rénovation.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <AideCard title="MaPrimeRénov'" montant="Jusqu'à 10 000€" description="Aide de l'État pour les propriétaires occupants et bailleurs." conditions="Logement de plus de 15 ans, artisan RGE obligatoire" href="/aides-renovation/" />
+        <AideCard title="CEE" montant="Jusqu'à 4 000€" description="Certificats d'économie d'énergie financés par les énergéticiens." conditions="Cumulable avec MaPrimeRénov', sans condition de revenus" href="/guides/cee-certificats-energie/" />
+        <AideCard title="Éco-PTZ" montant="Jusqu'à 50 000€" description="Prêt à taux zéro pour financer le reste à charge." conditions="Sans conditions de revenus, remboursement sur 20 ans max" href="/guides/eco-ptz-conditions-2026/" />
+        <AideCard title="Aides locales" montant="Variable" description="Aides régionales, départementales et communales complémentaires." conditions="Varient selon votre localisation géographique" href="/aides-renovation/" />
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ÇA MARCHE -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Comment ça marche ?</h2>
+        <p class="mt-4 text-text-muted">3 étapes simples pour lancer vos travaux de rénovation.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-heading font-bold text-accent">1</span>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-text">Simulez vos aides</h3>
+          <p class="mt-2 text-sm text-text-muted">Estimez le montant de vos aides en quelques clics grâce à notre simulateur gratuit.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent-warm/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-heading font-bold text-accent-warm">2</span>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-text">Recevez 3 devis</h3>
+          <p class="mt-2 text-sm text-text-muted">Des artisans RGE certifiés de votre région vous contactent sous 48h avec leurs devis gratuits.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-heading font-bold text-primary">3</span>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-text">Travaux réalisés</h3>
+          <p class="mt-2 text-sm text-text-muted">Choisissez votre artisan et lancez vos travaux. Nous vous accompagnons dans les démarches d'aides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIANCE -->
+  <section class="py-16 lg:py-24 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white">Artisans RGE certifiés</h3>
+          <p class="mt-2 text-sm text-white/70">Tous nos artisans partenaires sont certifiés RGE, condition indispensable pour bénéficier des aides.</p>
+        </div>
+        <div>
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white">Devis 100% gratuits</h3>
+          <p class="mt-2 text-sm text-white/70">Recevez jusqu'à 3 devis gratuits et sans engagement de la part d'artisans qualifiés de votre région.</p>
+        </div>
+        <div>
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white">Accompagnement dossier</h3>
+          <p class="mt-2 text-sm text-white/70">Nos artisans partenaires vous aident dans les démarches administratives pour obtenir vos aides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES RÉCENTS -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl md:text-3xl font-heading font-bold text-text">Guides et articles récents</h2>
+        <a href="/guides/" class="text-sm font-semibold text-primary hover:text-accent transition-colors">Voir tous les guides →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {recentGuides.map(guide => (
+          <ArticleCard
+            title={guide.data.title}
+            description={guide.data.description}
+            href={`/guides/${guide.id}/`}
+            category={guide.data.category}
+            aideMontant={guide.data.aideMontant}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-primary to-dark">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white">Prêt à rénover votre logement ?</h2>
+      <p class="mt-4 text-lg text-white/80">Obtenez 3 devis gratuits d'artisans RGE certifiés et profitez des aides 2026.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/devis/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-xl transition-colors shadow-xl shadow-amber-500/25">
+          Demander mes devis gratuits
+        </a>
+        <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:bg-white/10 rounded-xl transition-colors">
+          Simuler mes aides
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,93 @@
+# Renoventis — Index complet du contenu
+
+## Pages principales
+
+### Homepage (/)
+Media rénovation énergétique. Guides aides de l'État,
+conseils travaux et mise en relation artisans RGE.
+MaPrimeRénov, CEE, Eco-PTZ expliqués simplement.
+
+### Isolation (/isolation/)
+Guide isolation thermique 2026 : combles perdus,
+murs par l'extérieur/intérieur, plancher bas,
+fenêtres double vitrage. Prix et aides disponibles.
+
+### Pompe à chaleur (/pompe-a-chaleur/)
+PAC air/air, air/eau, géothermique. Prix 2026,
+aides MaPrimeRénov jusqu'à 5000€, retour sur
+investissement et artisans RGE.
+
+### Panneaux solaires (/panneaux-solaires/)
+Installation photovoltaïque 2026. Rentabilité,
+prime autoconsommation, simulation production kWh.
+
+### Chaudière biomasse (/chaudiere-biomasse/)
+Chaudière à granulés et bûches 2026. Prix,
+aides MaPrimeRénov, économies sur le chauffage.
+
+### VMC (/ventilation-vmc/)
+VMC simple flux et double flux 2026. Amélioration
+qualité de l'air et performance énergétique.
+
+### Aides rénovation (/aides-renovation/)
+MaPrimeRénov, CEE, Eco-PTZ, aides locales.
+Guide complet montants et conditions 2026.
+
+### Devis (/devis/)
+Formulaire de demande de devis gratuits auprès
+d'artisans RGE certifiés. Réponse sous 48h.
+
+### Simulateur (/simulateurs/aides-renovation/)
+Simulateur d'aides à la rénovation énergétique.
+Estimation MaPrimeRénov selon travaux et revenus.
+
+### Guides (/guides/)
+15 articles experts rénovation énergétique avec
+données officielles ANAH et ADEME 2026.
+
+## Articles
+
+### MaPrimeRénov 2026 (/guides/maprimrenov-2026-guide/)
+Guide complet : montants, conditions, démarches.
+
+### Isolation combles (/guides/isolation-combles-perdus-prix/)
+Prix, techniques soufflage/déroulage, aides.
+
+### PAC air/eau (/guides/pompe-chaleur-air-eau-prix/)
+Prix, COP, aides MaPrimeRénov, économies.
+
+### Panneaux solaires rentabilité (/guides/panneaux-solaires-rentabilite/)
+Coût, production kWh, amortissement.
+
+### Améliorer son DPE (/guides/dpe-logement-ameliorer/)
+Travaux prioritaires pour gagner des classes.
+
+### Passoires thermiques (/guides/passoire-thermique-obligation/)
+Obligations 2026, calendrier, aides renforcées.
+
+### CEE (/guides/cee-certificats-energie/)
+Fonctionnement, montants, démarches.
+
+### ITE (/guides/isolation-murs-exterieurs-prix/)
+Prix isolation extérieure, techniques, aides.
+
+### Eco-PTZ (/guides/eco-ptz-conditions-2026/)
+Conditions, montant, démarches bancaires.
+
+### Artisan RGE (/guides/artisan-rge-comment-choisir/)
+Comment vérifier, comparer, choisir.
+
+### Chaudière granulés (/guides/chaudiere-granules-prix/)
+Prix, aides, économies vs gaz/fioul.
+
+### VMC double flux (/guides/vmc-double-flux-avantages/)
+Avantages, prix, aides disponibles.
+
+### Ordre des travaux (/guides/renovation-energetique-ordre-travaux/)
+Séquence optimale de rénovation.
+
+### Audit énergétique (/guides/audit-energetique-obligatoire/)
+Obligation, prix, différence avec DPE.
+
+### Économies réelles (/guides/economies-energie-travaux/)
+Chiffres par type de travaux, ROI.

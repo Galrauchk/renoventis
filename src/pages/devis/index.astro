@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import DevisForm from '../../components/DevisForm.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Demande de devis rénovation énergétique',
+  description: 'Recevez 3 devis gratuits d\'artisans RGE certifiés pour vos travaux de rénovation énergétique.',
+  provider: { '@type': 'Organization', name: 'Renoventis', url: 'https://renoventis.fr' },
+  areaServed: { '@type': 'Country', name: 'France' },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Devis 100% gratuits et sans engagement' },
+};
+---
+
+<BaseLayout
+  title="Demande de devis rénovation énergétique gratuits | Renoventis"
+  description="Recevez 3 devis gratuits d'artisans RGE certifiés pour vos travaux de rénovation : isolation, PAC, solaire, chaudière. Réponse sous 48h."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Demande de devis' }]} />
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">
+        Recevez 3 devis gratuits sous 48h
+      </h1>
+      <p class="mt-4 text-lg text-text-muted">
+        Des artisans RGE certifiés de votre région vous proposent leurs devis gratuitement et sans engagement.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-6 text-sm text-text-muted">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          100% gratuit
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Sans engagement
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Artisans RGE
+        </span>
+      </div>
+    </div>
+
+    <DevisForm />
+
+    <div class="mt-16 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <span class="text-lg font-heading font-bold text-accent">1</span>
+        </div>
+        <h3 class="text-sm font-semibold text-text">Décrivez votre projet</h3>
+        <p class="mt-1 text-xs text-text-muted">Travaux, logement, revenus</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-accent-warm/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <span class="text-lg font-heading font-bold text-accent-warm">2</span>
+        </div>
+        <h3 class="text-sm font-semibold text-text">Recevez 3 devis</h3>
+        <p class="mt-1 text-xs text-text-muted">Artisans RGE sous 48h</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <span class="text-lg font-heading font-bold text-primary">3</span>
+        </div>
+        <h3 class="text-sm font-semibold text-text">Comparez et choisissez</h3>
+        <p class="mt-1 text-xs text-text-muted">Sans engagement</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

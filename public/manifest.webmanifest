@@ -1,0 +1,16 @@
+{
+  "name": "Renoventis",
+  "short_name": "Renoventis",
+  "description": "Rénovez mieux, dépensez moins",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B4332",
+  "theme_color": "#52B788",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

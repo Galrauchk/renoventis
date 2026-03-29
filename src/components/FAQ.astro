@@ -1,0 +1,42 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  title?: string;
+}
+
+const { items, title = 'Questions fréquentes' } = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="py-16">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <h2 class="text-2xl md:text-3xl font-heading font-bold text-text mb-8">{title}</h2>
+  <div class="space-y-3">
+    {items.map((item, i) => (
+      <details class="group bg-white rounded-xl border border-gray-100 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface transition-colors">
+          <span class="text-base font-medium text-text pr-4">{item.question}</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-text-muted leading-relaxed">{item.answer}</div>
+      </details>
+    ))}
+  </div>
+</section>

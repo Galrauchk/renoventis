@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="Politique de confidentialité | Renoventis"
+  description="Politique de confidentialité de Renoventis : collecte, traitement et protection de vos données personnelles."
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Politique de confidentialité' }]} />
+
+    <h1 class="text-3xl font-heading font-extrabold text-text">Politique de confidentialité</h1>
+    <p class="mt-4 text-text-muted">Dernière mise à jour : 29 mars 2026</p>
+
+    <div class="mt-8 prose prose-lg max-w-none">
+      <h2>1. Responsable du traitement</h2>
+      <p>
+        Le responsable du traitement des données personnelles collectées sur renoventis.fr est Renoventis, joignable à l'adresse contact@renoventis.fr.
+      </p>
+
+      <h2>2. Données collectées</h2>
+      <p>Nous collectons les données suivantes dans le cadre de nos formulaires :</p>
+      <ul>
+        <li><strong>Demande de devis :</strong> nom, email, téléphone, code postal, type de travaux, type de logement, surface, revenus fiscaux</li>
+        <li><strong>Contact :</strong> nom, email, sujet, message</li>
+        <li><strong>Navigation :</strong> données de navigation anonymisées (pages consultées, durée de visite)</li>
+      </ul>
+
+      <h2>3. Finalités du traitement</h2>
+      <p>Vos données sont utilisées pour :</p>
+      <ul>
+        <li>Vous mettre en relation avec des artisans RGE de votre région</li>
+        <li>Répondre à vos demandes de contact</li>
+        <li>Améliorer nos services et contenus</li>
+      </ul>
+
+      <h2>4. Base légale</h2>
+      <p>Le traitement de vos données repose sur votre consentement (soumission des formulaires) et notre intérêt légitime (amélioration du service).</p>
+
+      <h2>5. Destinataires des données</h2>
+      <p>
+        Vos données de demande de devis sont transmises à un maximum de 3 artisans RGE de votre région. Vos données ne sont jamais vendues à des tiers. Nos sous-traitants techniques (hébergement, envoi d'emails) ont accès aux données dans le strict cadre de leurs missions.
+      </p>
+
+      <h2>6. Durée de conservation</h2>
+      <ul>
+        <li>Données de devis : 12 mois après la demande</li>
+        <li>Données de contact : 12 mois après le dernier échange</li>
+        <li>Données de navigation : 13 mois</li>
+      </ul>
+
+      <h2>7. Vos droits</h2>
+      <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+      <ul>
+        <li>Droit d'accès à vos données</li>
+        <li>Droit de rectification</li>
+        <li>Droit à l'effacement</li>
+        <li>Droit à la portabilité</li>
+        <li>Droit d'opposition au traitement</li>
+      </ul>
+      <p>Pour exercer ces droits, contactez-nous à <strong>contact@renoventis.fr</strong>.</p>
+
+      <h2>8. Cookies</h2>
+      <p>
+        Renoventis utilise uniquement des cookies techniques nécessaires au fonctionnement du site. Aucun cookie de tracking publicitaire n'est utilisé.
+      </p>
+
+      <h2>9. Sécurité</h2>
+      <p>
+        Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre l'accès non autorisé, la modification, la divulgation ou la destruction.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

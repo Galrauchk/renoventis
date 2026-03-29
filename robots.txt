@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renoventis.fr/sitemap-index.xml
