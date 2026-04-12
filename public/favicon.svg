@@ -1,18 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
   <defs>
-    <linearGradient id="favBg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+    <linearGradient id="fav-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#1B4332"/>
       <stop offset="100%" stop-color="#081C15"/>
     </linearGradient>
-    <linearGradient id="favLeaf" x1="20" y1="8" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+    <linearGradient id="fav-ring" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#52B788"/>
-      <stop offset="100%" stop-color="#95D5B2"/>
+      <stop offset="100%" stop-color="#40916C"/>
     </linearGradient>
   </defs>
-  <rect width="48" height="48" rx="12" fill="url(#favBg)"/>
-  <!-- Abstract R letterform with leaf motif -->
-  <path d="M14 36V14h8c5.5 0 9 3 9 7.5 0 3.5-2 6-5.5 7L32 36h-5l-5.5-7H19v7h-5z M19 18v7h3.5c2.5 0 4-1.5 4-3.5S25 18 22.5 18H19z" fill="white"/>
-  <!-- Leaf accent -->
-  <path d="M30 10c3 0 6 2.5 6 6 0 3-2 5-4 6-1-3-3-5-6-6 0-3.5 2-6 4-6z" fill="url(#favLeaf)" opacity="0.9"/>
-  <path d="M32 12c-1 2-1 4 0 6" stroke="white" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Background -->
+  <rect width="48" height="48" rx="12" fill="url(#fav-bg)"/>
+  <!-- Circle mark -->
+  <circle cx="24" cy="24" r="16" fill="none" stroke="url(#fav-ring)" stroke-width="2"/>
+  <!-- R letterform -->
+  <path d="M18 33V15h6.5c3.8 0 6.2 2.2 6.2 5.5 0 2.8-1.7 4.6-4.3 5.3L31 33h-3.8l-4.2-6.5H21.5V33H18zM21.5 18v5h3c2 0 3.2-1.1 3.2-2.5s-1.2-2.5-3.2-2.5h-3z" fill="white"/>
+  <!-- Energy arcs -->
+  <path d="M35 10c2 2.5 3.2 5.5 3.2 9" stroke="#52B788" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M38 8c2 3 3.2 6.8 3.2 11" stroke="#52B788" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
 </svg>

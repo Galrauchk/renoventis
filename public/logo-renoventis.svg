@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" fill="none">
   <defs>
-    <linearGradient id="logoLeaf" x1="24" y1="2" x2="36" y2="16" gradientUnits="userSpaceOnUse">
+    <linearGradient id="mark-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#52B788"/>
-      <stop offset="100%" stop-color="#2D6A4F"/>
+      <stop offset="50%" stop-color="#40916C"/>
+      <stop offset="100%" stop-color="#1B4332"/>
     </linearGradient>
   </defs>
-  <!-- Icon mark -->
+  <!-- Monogram mark: geometric R with energy arc -->
   <g>
-    <!-- Abstract house/shield shape -->
-    <path d="M18 4L4 16V34h28V16L18 4z" fill="#1B4332"/>
-    <!-- Inner window/energy symbol -->
-    <rect x="12" y="18" width="12" height="12" rx="2" fill="#52B788" opacity="0.3"/>
-    <path d="M18 18v12M12 24h12" stroke="#52B788" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Leaf -->
-    <path d="M26 6c3 0 5.5 2 5.5 5 0 2.5-1.5 4.5-3.5 5.2-.8-2.5-2.5-4.2-5-5.2.5-3 2-5 3-5z" fill="url(#logoLeaf)"/>
-    <path d="M28 7.5c-.8 1.5-.8 3.5 0 5.2" stroke="white" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <!-- Outer circle -->
+    <circle cx="22" cy="22" r="20" fill="none" stroke="url(#mark-grad)" stroke-width="2.5"/>
+    <!-- Inner R letterform — clean, modern -->
+    <path d="M15 32V13h7.5c4.2 0 7 2.4 7 6 0 3-1.8 5-4.8 5.8L30 32h-4.2l-4.8-6.5H19V32h-4zM19 16.5v5.5h3.2c2.2 0 3.5-1.2 3.5-2.8 0-1.6-1.3-2.7-3.5-2.7H19z" fill="#1B4332"/>
+    <!-- Energy arc — subtle, top-right -->
+    <path d="M34 6c2.5 3 4 6.8 4 11" stroke="#52B788" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M38 4c2.8 3.8 4.5 8.5 4.5 13.5" stroke="#52B788" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.5"/>
   </g>
-  <!-- Wordmark -->
-  <text x="42" y="28" font-family="'Urbanist', sans-serif" font-weight="800" font-size="22" fill="#1B4332" letter-spacing="-0.5">Renoventis</text>
+  <!-- Wordmark — elegant tracking -->
+  <text x="54" y="29" font-family="'Urbanist', sans-serif" font-weight="700" font-size="21" fill="#1B4332" letter-spacing="1.5">RENOVENTIS</text>
 </svg>
