@@ -15,7 +15,7 @@ const { title, description, href, illustration, aideMontant } = Astro.props;
     <div class="absolute inset-0 dot-pattern opacity-50"></div>
     <img src={illustration} alt={title} class="relative w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
     {aideMontant && (
-      <span class="absolute top-4 right-4 inline-flex items-center px-3 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-lg shadow-amber-500/25">
+      <span class="absolute top-4 right-4 inline-flex items-center px-3 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-accent to-accent-warm rounded-full shadow-lg shadow-accent/25">
         Aide {aideMontant}
       </span>
     )}

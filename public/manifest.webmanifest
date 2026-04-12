@@ -1,16 +1,21 @@
 {
   "name": "Renoventis",
   "short_name": "Renoventis",
-  "description": "Rénovez mieux, dépensez moins",
+  "description": "Votre rénovation énergétique premium",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1B4332",
-  "theme_color": "#52B788",
+  "background_color": "#0a1628",
+  "theme_color": "#b8963e",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }

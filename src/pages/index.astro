@@ -17,7 +17,7 @@ const jsonLd = [
     '@type': 'Organization',
     name: 'Renoventis',
     url: 'https://renoventis.fr',
-    logo: 'https://renoventis.fr/logo-renoventis.svg',
+    logo: 'https://renoventis.fr/logo-renoventis.png',
     description: 'Media rénovation énergétique — Guides, aides et mise en relation artisans RGE',
     contactPoint: { '@type': 'ContactPoint', email: 'contact@renoventis.fr', contactType: 'customer service' },
   },
@@ -156,7 +156,7 @@ const travaux = [
                 Aide {t.aideMontant}
               </span>
             )}
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-dark flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-[#1a2744] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
               {t.icon === 'shield' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>}
               {t.icon === 'flame' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>}
               {t.icon === 'sun' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>}
@@ -224,7 +224,7 @@ const travaux = [
         <div class="fade-up text-center" style="transition-delay: 0.1s;">
           <div class="relative w-20 h-20 mx-auto mb-6">
             <div class="absolute inset-0 bg-gradient-to-br from-accent-warm/20 to-accent-warm/5 rounded-3xl rotate-6"></div>
-            <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-amber-500/10 flex items-center justify-center">
+            <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-accent/10 flex items-center justify-center">
               <span class="text-3xl font-heading font-extrabold text-gradient-warm">2</span>
             </div>
           </div>
@@ -321,7 +321,7 @@ const travaux = [
       </h2>
       <p class="mt-6 text-lg lg:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">Obtenez 3 devis gratuits d'artisans RGE certifiés et profitez des aides 2026.</p>
       <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/devis/" class="group inline-flex items-center justify-center px-10 py-5 text-base font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-2xl transition-all duration-300 shadow-2xl shadow-amber-500/25 hover:-translate-y-1">
+        <a href="/devis/" class="group inline-flex items-center justify-center px-10 py-5 text-base font-bold text-white bg-gradient-to-r from-accent to-accent-warm hover:from-[#c9a546] hover:to-[#ddb84d] rounded-2xl transition-all duration-300 shadow-2xl shadow-accent/25 hover:-translate-y-1">
           Demander mes devis gratuits
           <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
