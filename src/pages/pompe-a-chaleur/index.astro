@@ -22,21 +22,24 @@ const faqItems = [
   description="Guide complet pompe à chaleur 2026 : prix PAC air/eau et air/air, aides MaPrimeRénov jusqu'à 5000€, COP, économies et artisans RGE."
   jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation pompe à chaleur', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Pompe à chaleur' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
+        <div class="fade-up">
+        <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
           Pompe à chaleur 2026 : prix, aides et installation
         </h1>
-        <p class="mt-4 text-lg text-text-muted">
+        <p class="mt-5 text-lg text-text-muted leading-relaxed">
           La pompe à chaleur est la solution de chauffage la plus efficace et la plus aidée en 2026. Jusqu'à 5 000€ de MaPrimeRénov' et 4 000€ de CEE.
         </p>
+        </div>
 
         <img src="/illustrations/pompe-chaleur.svg" alt="Pompe à chaleur air/eau" class="mt-8 w-full max-w-xl rounded-2xl" loading="lazy" />
 
-        <div class="mt-12 prose prose-lg max-w-none">
+        <div class="mt-12 prose prose-lg prose-premium max-w-none fade-up">
           <h2 class="text-2xl font-heading font-bold text-text">Qu'est-ce qu'une pompe à chaleur ?</h2>
           <p>La pompe à chaleur (PAC) est un système de chauffage qui capte les calories présentes dans l'air extérieur, l'eau ou le sol pour les restituer sous forme de chaleur dans votre logement. Son rendement exceptionnel (COP de 3 à 5) en fait la solution la plus économique à l'usage.</p>
 
@@ -53,33 +56,33 @@ const faqItems = [
         </div>
 
         <!-- Tableau comparatif -->
-        <div class="mt-8 overflow-x-auto">
+        <div class="mt-8 overflow-x-auto fade-up">
           <table class="w-full text-sm border-collapse">
             <thead>
-              <tr class="bg-primary text-white">
-                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Type PAC</th>
+              <tr class="bg-gradient-to-r from-primary to-dark text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-xl">Type PAC</th>
                 <th class="px-4 py-3 text-left font-semibold">Prix posé</th>
                 <th class="px-4 py-3 text-left font-semibold">COP moyen</th>
                 <th class="px-4 py-3 text-left font-semibold">MaPrimeRénov'</th>
-                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Économies</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-xl">Économies</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-gray-100">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Air/eau</td>
                 <td class="px-4 py-3">10 000-18 000€</td>
                 <td class="px-4 py-3">3-4</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
                 <td class="px-4 py-3">50-70%</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Air/air</td>
                 <td class="px-4 py-3">5 000-10 000€</td>
                 <td class="px-4 py-3">3-3.5</td>
                 <td class="px-4 py-3 text-text-muted">Non éligible</td>
                 <td class="px-4 py-3">30-50%</td>
               </tr>
-              <tr>
+              <tr class="hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Géothermique</td>
                 <td class="px-4 py-3">20 000-40 000€</td>
                 <td class="px-4 py-3">4-5</td>
@@ -90,9 +93,9 @@ const faqItems = [
           </table>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 fade-up">
           <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides pour l'installation d'une PAC</h2>
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid sm:grid-cols-2 gap-4 fade-up">
             <AideCard title="MaPrimeRénov'" montant="Jusqu'à 5 000€" description="Pour une PAC air/eau (revenus modestes)." conditions="Artisan RGE QualiPAC obligatoire" href="/aides-renovation/" />
             <AideCard title="CEE" montant="2 000 à 4 000€" description="Prime énergie cumulable." conditions="Remplacement d'une chaudière fossile" href="/guides/cee-certificats-energie/" />
           </div>
@@ -103,7 +106,9 @@ const faqItems = [
 
       <aside class="lg:col-span-1">
         <div class="sticky top-24 space-y-6">
-          <LeadGenForm travaux="Pompe à chaleur" title="Devis PAC gratuits" />
+          <div class="card-premium p-6">
+            <LeadGenForm travaux="Pompe à chaleur" title="Devis PAC gratuits" />
+          </div>
         </div>
       </aside>
     </div>

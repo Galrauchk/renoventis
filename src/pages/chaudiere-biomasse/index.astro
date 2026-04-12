@@ -22,19 +22,22 @@ const faqItems = [
   description="Guide chaudière à granulés 2026 : prix installation, aides MaPrimeRénov jusqu'à 5000€, économies vs gaz/fioul, artisans RGE."
   jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation chaudière biomasse', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Chaudière biomasse' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
-          Chaudière à granulés 2026 : prix, aides MaPrimeRénov'
-        </h1>
-        <p class="mt-4 text-lg text-text-muted">
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+            Chaudière à granulés 2026 : prix, aides MaPrimeRénov'
+          </h1>
+        </div>
+        <p class="mt-4 text-lg text-text-muted leading-relaxed">
           La chaudière à granulés (ou pellets) est une alternative économique et écologique au gaz et au fioul. Avec MaPrimeRénov' 2026, elle est accessible à tous les budgets.
         </p>
 
-        <div class="mt-12 prose prose-lg max-w-none">
+        <div class="mt-12 prose prose-lg max-w-none fade-up">
           <h2 class="text-2xl font-heading font-bold text-text">Pourquoi choisir une chaudière à granulés ?</h2>
           <p>La chaudière à granulés de bois offre un rendement supérieur à 90% et utilise un combustible renouvelable. Elle remplace avantageusement les chaudières gaz ou fioul vieillissantes.</p>
           <ul>
@@ -49,30 +52,30 @@ const faqItems = [
           <p>Le prix d'une chaudière à granulés varie selon la puissance, le type (standard ou condensation) et les options (silo intégré ou séparé).</p>
         </div>
 
-        <div class="mt-8 overflow-x-auto">
+        <div class="mt-8 overflow-x-auto fade-up">
           <table class="w-full text-sm border-collapse">
             <thead>
-              <tr class="bg-primary text-white">
-                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Type</th>
+              <tr class="bg-gradient-to-r from-primary to-dark text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-xl">Type</th>
                 <th class="px-4 py-3 text-left font-semibold">Prix posé</th>
                 <th class="px-4 py-3 text-left font-semibold">Rendement</th>
-                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Aide max</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-xl">Aide max</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-gray-100">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Standard</td>
                 <td class="px-4 py-3">12 000-16 000€</td>
                 <td class="px-4 py-3">90-92%</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Condensation</td>
                 <td class="px-4 py-3">16 000-22 000€</td>
                 <td class="px-4 py-3">95-105%</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">5 000€</td>
               </tr>
-              <tr>
+              <tr class="hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Bûches</td>
                 <td class="px-4 py-3">8 000-14 000€</td>
                 <td class="px-4 py-3">80-90%</td>
@@ -82,7 +85,7 @@ const faqItems = [
           </table>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 fade-up">
           <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides disponibles</h2>
           <div class="grid sm:grid-cols-2 gap-4">
             <AideCard title="MaPrimeRénov'" montant="Jusqu'à 5 000€" description="Pour les revenus très modestes à intermédiaires." conditions="Artisan RGE Qualibois obligatoire" href="/aides-renovation/" />

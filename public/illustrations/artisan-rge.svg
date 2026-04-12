@@ -1,53 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
-  <rect width="400" height="350" fill="#F0FAF4" rx="12"/>
-  <!-- Worker figure -->
-  <g transform="translate(150,40)">
+  <defs>
+    <linearGradient id="rgeShield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <filter id="rgeShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#1B4332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Central shield/badge -->
+  <g filter="url(#rgeShadow)" transform="translate(120, 40)">
+    <!-- Shield shape -->
+    <path d="M80 10 L150 40 L150 120 Q150 180 80 210 Q10 180 10 120 L10 40 Z" fill="url(#rgeShield)"/>
+    <path d="M80 10 L150 40 L150 120 Q150 180 80 210 Q10 180 10 120 L10 40 Z" fill="none" stroke="#95D5B2" stroke-width="2"/>
+    <!-- Inner shield -->
+    <path d="M80 25 L140 50 L140 115 Q140 168 80 195 Q20 168 20 115 L20 50 Z" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    <!-- Checkmark -->
+    <path d="M55 105 L72 122 L108 82" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- RGE text -->
+    <text x="80" y="158" font-family="Urbanist,sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="800">RGE</text>
+    <!-- Stars -->
+    <g fill="#F4A261">
+      <path d="M50 170l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+      <path d="M80 165l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+      <path d="M110 170l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+    </g>
+  </g>
+
+  <!-- Worker figure (simplified, professional) -->
+  <g transform="translate(30, 140)" opacity="0.7">
     <!-- Hard hat -->
-    <ellipse cx="50" cy="30" rx="35" ry="10" fill="#F4A261"/>
-    <path d="M20 30C20 10 80 10 80 30" fill="#F4A261"/>
-    <rect x="45" y="5" width="10" height="10" rx="5" fill="#F4A261"/>
+    <ellipse cx="45" cy="120" rx="18" ry="8" fill="#F4A261"/>
+    <path d="M28 120 Q28 105 45 105 Q62 105 62 120" fill="#F4A261"/>
     <!-- Head -->
-    <circle cx="50" cy="50" r="22" fill="#D4A574"/>
-    <!-- Eyes -->
-    <circle cx="42" cy="47" r="2.5" fill="#1B4332"/>
-    <circle cx="58" cy="47" r="2.5" fill="#1B4332"/>
-    <!-- Smile -->
-    <path d="M42 56C44 60 56 60 58 56" stroke="#1B4332" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <!-- Body / vest -->
-    <path d="M25 75L75 75L80 170L20 170Z" fill="#52B788"/>
-    <!-- Vest details -->
-    <line x1="50" y1="75" x2="50" y2="170" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
-    <rect x="30" y="90" width="15" height="10" rx="2" fill="#1B4332" opacity="0.2"/>
-    <!-- Arms -->
-    <path d="M25 80L0 130L10 135L30 95" fill="#52B788"/>
-    <path d="M75 80L100 130L90 135L70 95" fill="#52B788"/>
-    <!-- Hands -->
-    <circle cx="5" cy="132" r="7" fill="#D4A574"/>
-    <circle cx="95" cy="132" r="7" fill="#D4A574"/>
-    <!-- Tool in right hand -->
-    <rect x="90" y="115" width="4" height="30" rx="1" fill="#6B7280" transform="rotate(15,92,130)"/>
-    <rect x="85" y="110" width="14" height="8" rx="2" fill="#6B7280" transform="rotate(15,92,114)"/>
-    <!-- Legs -->
-    <rect x="28" y="170" width="18" height="60" rx="4" fill="#1B4332"/>
-    <rect x="54" y="170" width="18" height="60" rx="4" fill="#1B4332"/>
-    <!-- Boots -->
-    <path d="M25 225L48 225L48 235L22 235Z" rx="3" fill="#2D2D2D"/>
-    <path d="M52 225L75 225L78 235L52 235Z" rx="3" fill="#2D2D2D"/>
+    <circle cx="45" cy="130" r="12" fill="#D4A574"/>
+    <!-- Body -->
+    <rect x="33" y="142" width="24" height="35" rx="4" fill="#2D6A4F"/>
+    <!-- Tool -->
+    <rect x="58" y="150" width="3" height="25" rx="1" fill="#9CA3AF"/>
+    <rect x="54" y="147" width="11" height="6" rx="2" fill="#6B7280"/>
   </g>
-  <!-- RGE Badge -->
-  <g transform="translate(270,80)">
-    <circle cx="45" cy="45" r="42" fill="white" stroke="#52B788" stroke-width="3"/>
-    <circle cx="45" cy="45" r="35" fill="#1B4332"/>
-    <text x="45" y="38" font-family="Urbanist,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">RGE</text>
-    <text x="45" y="53" font-family="Inter,sans-serif" font-size="8" fill="#52B788" text-anchor="middle">Reconnu</text>
-    <text x="45" y="63" font-family="Inter,sans-serif" font-size="8" fill="#52B788" text-anchor="middle">Garant</text>
-    <!-- Check mark -->
-    <path d="M30 72L40 82L62 55" stroke="#52B788" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0) scale(0.5)" />
+
+  <!-- Worker figure 2 -->
+  <g transform="translate(310, 140)" opacity="0.7">
+    <ellipse cx="45" cy="120" rx="18" ry="8" fill="#F4A261"/>
+    <path d="M28 120 Q28 105 45 105 Q62 105 62 120" fill="#F4A261"/>
+    <circle cx="45" cy="130" r="12" fill="#D4A574"/>
+    <rect x="33" y="142" width="24" height="35" rx="4" fill="#1B4332"/>
+    <!-- Clipboard -->
+    <rect x="20" y="155" width="14" height="18" rx="2" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+    <line x1="23" y1="161" x2="31" y2="161" stroke="#D1D5DB" stroke-width="1"/>
+    <line x1="23" y1="165" x2="31" y2="165" stroke="#D1D5DB" stroke-width="1"/>
+    <line x1="23" y1="169" x2="29" y2="169" stroke="#D1D5DB" stroke-width="1"/>
   </g>
-  <!-- Trust indicators -->
-  <g transform="translate(50,290)">
-    <rect x="0" y="0" width="300" height="35" rx="8" fill="#1B4332"/>
-    <text x="150" y="14" font-family="Inter,sans-serif" font-size="10" fill="#52B788" text-anchor="middle">✓ Certifié  ·  ✓ Assuré  ·  ✓ Qualifié</text>
-    <text x="150" y="28" font-family="Inter,sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.8">Artisans vérifiés et labellisés RGE</text>
+
+  <!-- Bottom badges -->
+  <g transform="translate(50, 280)" filter="url(#rgeShadow)">
+    <rect x="0" y="0" width="130" height="45" rx="10" fill="white"/>
+    <circle cx="25" cy="22" r="12" fill="#52B788" opacity="0.15"/>
+    <path d="M20 22l4 4 8-8" stroke="#52B788" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="45" y="18" font-family="Inter,sans-serif" font-size="9" fill="#5F6B66" font-weight="600">Certifié</text>
+    <text x="45" y="32" font-family="Urbanist,sans-serif" font-size="12" fill="#1B4332" font-weight="700">Qualibat</text>
+  </g>
+
+  <g transform="translate(220, 280)" filter="url(#rgeShadow)">
+    <rect x="0" y="0" width="130" height="45" rx="10" fill="white"/>
+    <circle cx="25" cy="22" r="12" fill="#F4A261" opacity="0.15"/>
+    <path d="M20 22l4 4 8-8" stroke="#F4A261" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="45" y="18" font-family="Inter,sans-serif" font-size="9" fill="#5F6B66" font-weight="600">Garantie</text>
+    <text x="45" y="32" font-family="Urbanist,sans-serif" font-size="12" fill="#1B4332" font-weight="700">Décennale</text>
   </g>
 </svg>

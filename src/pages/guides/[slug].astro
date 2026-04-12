@@ -38,9 +38,9 @@ const jsonLd = {
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: guide.data.title }]} />
 
     <div class="grid lg:grid-cols-3 gap-12">
-      <article class="lg:col-span-2">
+      <article class="lg:col-span-2 fade-up">
         <div class="flex items-center gap-2 mb-4">
-          <span class="inline-block px-2.5 py-1 text-xs font-medium text-primary bg-surface rounded-full">{guide.data.category}</span>
+          <span class="inline-block px-2.5 py-1 text-xs font-medium text-primary bg-accent/10 rounded-lg">{guide.data.category}</span>
           {guide.data.aideMontant && (
             <span class="inline-block px-2.5 py-1 text-xs font-semibold text-white bg-accent-warm rounded-full">
               Aide jusqu'à {guide.data.aideMontant}
@@ -55,17 +55,17 @@ const jsonLd = {
           Mis à jour le {new Date(guide.data.publishDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
         </div>
 
-        <div class="mt-4 p-4 bg-surface rounded-xl border border-accent/20 text-sm">
+        <div class="mt-4 p-4 card-premium text-sm">
           <p class="font-medium text-text">Sources officielles :</p>
           <p class="text-text-muted mt-1">ANAH (Agence Nationale de l'Habitat) · ADEME · france-renov.gouv.fr</p>
         </div>
 
-        <div class="mt-8 prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-text prose-a:text-primary hover:prose-a:text-accent">
+        <div class="mt-8 prose prose-lg prose-premium max-w-none prose-headings:font-heading prose-headings:text-text prose-a:text-primary hover:prose-a:text-accent">
           <Content />
         </div>
 
         <!-- CTA bottom -->
-        <div class="mt-12 bg-gradient-to-br from-primary to-dark rounded-2xl p-8 text-center">
+        <div class="mt-12 bg-gradient-to-br from-primary to-dark rounded-2xl p-8 text-center fade-up">
           <h3 class="text-xl font-heading font-bold text-white">Prêt à lancer vos travaux ?</h3>
           <p class="mt-2 text-sm text-white/70">Obtenez 3 devis gratuits d'artisans RGE certifiés.</p>
           <a href="/devis/" class="mt-4 inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-lg transition-colors">

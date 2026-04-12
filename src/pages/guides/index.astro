@@ -17,7 +17,8 @@ const categories = [...new Set(guides.map(g => g.data.category))];
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Guides' }]} />
 
-    <div class="max-w-3xl mb-12">
+    <div class="max-w-3xl mb-12 fade-up">
+      <span class="inline-block px-3 py-1 text-xs font-semibold text-accent bg-accent/10 rounded-lg mb-4 tracking-wide uppercase">Nos guides</span>
       <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">Guides rénovation énergétique</h1>
       <p class="mt-4 text-lg text-text-muted">Retrouvez nos guides experts pour comprendre les aides, comparer les travaux et réussir votre projet de rénovation.</p>
     </div>
@@ -26,11 +27,11 @@ const categories = [...new Set(guides.map(g => g.data.category))];
     <div class="flex flex-wrap gap-2 mb-8">
       <span class="px-3 py-1.5 text-sm font-medium text-white bg-primary rounded-full">Tous</span>
       {categories.map(cat => (
-        <span class="px-3 py-1.5 text-sm font-medium text-text-muted bg-surface rounded-full hover:bg-gray-200 transition-colors cursor-pointer">{cat}</span>
+        <span class="px-3 py-1.5 text-sm font-medium text-text-muted bg-gray-100 rounded-full hover:bg-gray-200 transition-colors cursor-pointer">{cat}</span>
       ))}
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
       {sortedGuides.map(guide => (
         <ArticleCard
           title={guide.data.title}

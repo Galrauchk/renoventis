@@ -1,39 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
-  <rect width="400" height="350" fill="#F0FAF4" rx="12"/>
-  <!-- Shield -->
-  <g transform="translate(130,30)">
-    <path d="M70 0L140 30V100C140 155 70 190 70 190C70 190 0 155 0 100V30Z" fill="#1B4332"/>
-    <path d="M70 10L130 37V100C130 148 70 180 70 180C70 180 10 148 10 100V37Z" fill="#2D6A4F"/>
-    <!-- Euro symbol -->
-    <text x="70" y="100" font-family="Urbanist,sans-serif" font-size="60" fill="#F4A261" text-anchor="middle" font-weight="700">€</text>
-    <!-- Stars around euro -->
-    <circle cx="70" cy="35" r="3" fill="#F4A261"/>
-    <circle cx="45" cy="42" r="3" fill="#F4A261"/>
-    <circle cx="95" cy="42" r="3" fill="#F4A261"/>
-    <circle cx="38" cy="65" r="3" fill="#F4A261"/>
-    <circle cx="102" cy="65" r="3" fill="#F4A261"/>
+  <defs>
+    <linearGradient id="aideGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4A261"/>
+      <stop offset="100%" stop-color="#E76F51"/>
+    </linearGradient>
+    <filter id="aideShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1B4332" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Central document/form -->
+  <g filter="url(#aideShadow)" transform="translate(100, 30)">
+    <rect x="0" y="0" width="200" height="260" rx="16" fill="white"/>
+    <!-- Header stripe -->
+    <rect x="0" y="0" width="200" height="50" rx="16" fill="url(#aideGrad)"/>
+    <rect x="0" y="30" width="200" height="20" fill="url(#aideGrad)"/>
+    <!-- French flag colors -->
+    <rect x="15" y="15" width="6" height="20" rx="1" fill="#2563EB"/>
+    <rect x="21" y="15" width="6" height="20" rx="1" fill="white"/>
+    <rect x="27" y="15" width="6" height="20" rx="1" fill="#DC2626"/>
+    <text x="45" y="30" font-family="Urbanist,sans-serif" font-size="12" fill="white" font-weight="700">MaPrimeRénov'</text>
+
+    <!-- Form fields -->
+    <rect x="20" y="65" width="160" height="10" rx="3" fill="#F3F4F6"/>
+    <rect x="20" y="65" width="100" height="10" rx="3" fill="#52B788" opacity="0.2"/>
+    <rect x="20" y="85" width="160" height="10" rx="3" fill="#F3F4F6"/>
+    <rect x="20" y="85" width="130" height="10" rx="3" fill="#52B788" opacity="0.2"/>
+    <rect x="20" y="105" width="160" height="10" rx="3" fill="#F3F4F6"/>
+    <rect x="20" y="105" width="80" height="10" rx="3" fill="#52B788" opacity="0.2"/>
+
+    <!-- Checkmarks -->
+    <g stroke="#52B788" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M25 140 l4 4 8-8"/>
+      <text x="45" y="143" font-family="Inter,sans-serif" font-size="10" fill="#5F6B66" font-weight="500" stroke="none">Propriétaire occupant</text>
+      <path d="M25 160 l4 4 8-8"/>
+      <text x="45" y="163" font-family="Inter,sans-serif" font-size="10" fill="#5F6B66" font-weight="500" stroke="none">Logement &gt; 15 ans</text>
+      <path d="M25 180 l4 4 8-8"/>
+      <text x="45" y="183" font-family="Inter,sans-serif" font-size="10" fill="#5F6B66" font-weight="500" stroke="none">Artisan RGE</text>
+    </g>
+
+    <!-- Amount -->
+    <rect x="20" y="205" width="160" height="40" rx="10" fill="#F8FBF9" stroke="#52B788" stroke-width="1"/>
+    <text x="100" y="222" font-family="Inter,sans-serif" font-size="9" fill="#5F6B66" text-anchor="middle" font-weight="600">Montant estimé</text>
+    <text x="100" y="240" font-family="Urbanist,sans-serif" font-size="18" fill="#F4A261" text-anchor="middle" font-weight="800">10 000 €</text>
   </g>
-  <!-- Aid cards -->
-  <g transform="translate(20,240)">
-    <rect x="0" y="0" width="85" height="55" rx="6" fill="white" stroke="#52B788" stroke-width="1.5"/>
-    <text x="42" y="20" font-family="Inter,sans-serif" font-size="9" fill="#1B4332" text-anchor="middle" font-weight="600">MaPrimeRénov'</text>
-    <text x="42" y="40" font-family="Urbanist,sans-serif" font-size="16" fill="#F4A261" text-anchor="middle" font-weight="700">10 000€</text>
+
+  <!-- Side badges -->
+  <g transform="translate(20, 100)" filter="url(#aideShadow)">
+    <rect x="0" y="0" width="80" height="35" rx="10" fill="white"/>
+    <text x="40" y="15" font-family="Inter,sans-serif" font-size="8" fill="#5F6B66" text-anchor="middle" font-weight="600">CEE</text>
+    <text x="40" y="28" font-family="Urbanist,sans-serif" font-size="11" fill="#52B788" text-anchor="middle" font-weight="700">4 000€</text>
   </g>
-  <g transform="translate(112,240)">
-    <rect x="0" y="0" width="85" height="55" rx="6" fill="white" stroke="#52B788" stroke-width="1.5"/>
-    <text x="42" y="20" font-family="Inter,sans-serif" font-size="9" fill="#1B4332" text-anchor="middle" font-weight="600">CEE</text>
-    <text x="42" y="40" font-family="Urbanist,sans-serif" font-size="16" fill="#F4A261" text-anchor="middle" font-weight="700">4 000€</text>
+
+  <g transform="translate(20, 150)" filter="url(#aideShadow)">
+    <rect x="0" y="0" width="80" height="35" rx="10" fill="white"/>
+    <text x="40" y="15" font-family="Inter,sans-serif" font-size="8" fill="#5F6B66" text-anchor="middle" font-weight="600">Éco-PTZ</text>
+    <text x="40" y="28" font-family="Urbanist,sans-serif" font-size="11" fill="#52B788" text-anchor="middle" font-weight="700">50 000€</text>
   </g>
-  <g transform="translate(204,240)">
-    <rect x="0" y="0" width="85" height="55" rx="6" fill="white" stroke="#52B788" stroke-width="1.5"/>
-    <text x="42" y="20" font-family="Inter,sans-serif" font-size="9" fill="#1B4332" text-anchor="middle" font-weight="600">Éco-PTZ</text>
-    <text x="42" y="40" font-family="Urbanist,sans-serif" font-size="16" fill="#F4A261" text-anchor="middle" font-weight="700">50 000€</text>
+
+  <g transform="translate(300, 100)" filter="url(#aideShadow)">
+    <rect x="0" y="0" width="80" height="35" rx="10" fill="white"/>
+    <text x="40" y="15" font-family="Inter,sans-serif" font-size="8" fill="#5F6B66" text-anchor="middle" font-weight="600">Locales</text>
+    <text x="40" y="28" font-family="Urbanist,sans-serif" font-size="11" fill="#F4A261" text-anchor="middle" font-weight="700">Variable</text>
   </g>
-  <g transform="translate(296,240)">
-    <rect x="0" y="0" width="85" height="55" rx="6" fill="white" stroke="#52B788" stroke-width="1.5"/>
-    <text x="42" y="20" font-family="Inter,sans-serif" font-size="9" fill="#1B4332" text-anchor="middle" font-weight="600">Aides locales</text>
-    <text x="42" y="40" font-family="Urbanist,sans-serif" font-size="16" fill="#F4A261" text-anchor="middle" font-weight="700">Variable</text>
+
+  <!-- Connection lines -->
+  <g stroke="#52B788" stroke-width="1" stroke-dasharray="4 3" opacity="0.4">
+    <line x1="80" y1="117" x2="100" y2="117"/>
+    <line x1="80" y1="167" x2="100" y2="167"/>
+    <line x1="300" y1="117" x2="315" y2="117"/>
   </g>
-  <!-- Subtitle -->
-  <text x="200" y="320" font-family="Inter,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Cumulables sous conditions</text>
+
+  <!-- Bottom CTA -->
+  <g transform="translate(80, 305)" filter="url(#aideShadow)">
+    <rect x="0" y="0" width="240" height="36" rx="18" fill="url(#warmGrad)"/>
+    <text x="120" y="23" font-family="Urbanist,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">Cumulez jusqu'à 90% d'aides</text>
+  </g>
 </svg>

@@ -22,11 +22,24 @@ const props = Astro.props;
 <head>
   <SEOHead {...props} />
 </head>
-<body class="min-h-screen flex flex-col bg-white text-text font-body antialiased">
+<body class="min-h-screen flex flex-col bg-white text-text font-body antialiased overflow-x-hidden">
   <Header />
   <main class="flex-1 pt-16 lg:pt-20">
     <slot />
   </main>
   <Footer />
+
+  <script>
+    // Fade-up scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

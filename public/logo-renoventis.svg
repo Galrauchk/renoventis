@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" fill="none">
   <defs>
-    <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1B4332"/>
-      <stop offset="100%" stop-color="#52B788"/>
+    <linearGradient id="logoLeaf" x1="24" y1="2" x2="36" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
     </linearGradient>
   </defs>
-  <!-- House icon with leaf -->
-  <g transform="translate(2,4)">
-    <!-- House body -->
-    <path d="M20 8L4 22V40H16V30H24V40H36V22L20 8Z" fill="url(#logoGrad)"/>
-    <!-- Roof -->
-    <path d="M0 22L20 4L40 22L37 25L20 10L3 25Z" fill="url(#logoGrad)"/>
-    <!-- Circular arrow / leaf -->
-    <path d="M30 14C34 10 38 12 38 12C38 12 40 16 36 20C34 22 31 22 29 21" stroke="#52B788" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M36 20C36 20 33 19 32 17" stroke="#52B788" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Icon mark -->
+  <g>
+    <!-- Abstract house/shield shape -->
+    <path d="M18 4L4 16V34h28V16L18 4z" fill="#1B4332"/>
+    <!-- Inner window/energy symbol -->
+    <rect x="12" y="18" width="12" height="12" rx="2" fill="#52B788" opacity="0.3"/>
+    <path d="M18 18v12M12 24h12" stroke="#52B788" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Leaf -->
+    <path d="M26 6c3 0 5.5 2 5.5 5 0 2.5-1.5 4.5-3.5 5.2-.8-2.5-2.5-4.2-5-5.2.5-3 2-5 3-5z" fill="url(#logoLeaf)"/>
+    <path d="M28 7.5c-.8 1.5-.8 3.5 0 5.2" stroke="white" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.7"/>
   </g>
   <!-- Wordmark -->
-  <text x="52" y="36" font-family="'Urbanist', sans-serif" font-weight="700" font-size="30" fill="#1B4332">Renoventis</text>
+  <text x="42" y="28" font-family="'Urbanist', sans-serif" font-weight="800" font-size="22" fill="#1B4332" letter-spacing="-0.5">Renoventis</text>
 </svg>

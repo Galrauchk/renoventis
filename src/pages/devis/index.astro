@@ -22,7 +22,7 @@ const jsonLd = {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Demande de devis' }]} />
 
-    <div class="text-center max-w-2xl mx-auto mb-12">
+    <div class="text-center max-w-2xl mx-auto mb-12 fade-up">
       <h1 class="text-3xl md:text-4xl font-heading font-extrabold text-text">
         Recevez 3 devis gratuits sous 48h
       </h1>
@@ -47,24 +47,33 @@ const jsonLd = {
 
     <DevisForm />
 
-    <div class="mt-16 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    <div class="mt-16 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto fade-up">
       <div class="text-center">
-        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-          <span class="text-lg font-heading font-bold text-accent">1</span>
+        <div class="relative w-20 h-20 mx-auto mb-6">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl rotate-6"></div>
+          <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-accent/10 flex items-center justify-center">
+            <span class="text-lg font-heading font-bold text-accent">1</span>
+          </div>
         </div>
         <h3 class="text-sm font-semibold text-text">Décrivez votre projet</h3>
         <p class="mt-1 text-xs text-text-muted">Travaux, logement, revenus</p>
       </div>
       <div class="text-center">
-        <div class="w-12 h-12 bg-accent-warm/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-          <span class="text-lg font-heading font-bold text-accent-warm">2</span>
+        <div class="relative w-20 h-20 mx-auto mb-6">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent-warm/20 to-accent-warm/5 rounded-3xl rotate-6"></div>
+          <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-accent-warm/10 flex items-center justify-center">
+            <span class="text-lg font-heading font-bold text-accent-warm">2</span>
+          </div>
         </div>
         <h3 class="text-sm font-semibold text-text">Recevez 3 devis</h3>
         <p class="mt-1 text-xs text-text-muted">Artisans RGE sous 48h</p>
       </div>
       <div class="text-center">
-        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-          <span class="text-lg font-heading font-bold text-primary">3</span>
+        <div class="relative w-20 h-20 mx-auto mb-6">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl rotate-6"></div>
+          <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-primary/10 flex items-center justify-center">
+            <span class="text-lg font-heading font-bold text-primary">3</span>
+          </div>
         </div>
         <h3 class="text-sm font-semibold text-text">Comparez et choisissez</h3>
         <p class="mt-1 text-xs text-text-muted">Sans engagement</p>

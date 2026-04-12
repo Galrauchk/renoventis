@@ -22,21 +22,24 @@ const faqItems = [
   description="Guide panneaux solaires 2026 : prix installation, rentabilité, prime autoconsommation, production kWh. Devis gratuits d'installateurs RGE."
   jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation panneaux solaires', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Panneaux solaires' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
-          Panneaux solaires 2026 : installation, prix et rentabilité
-        </h1>
-        <p class="mt-4 text-lg text-text-muted">
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+            Panneaux solaires 2026 : installation, prix et rentabilité
+          </h1>
+        </div>
+        <p class="mt-4 text-lg text-text-muted leading-relaxed">
           Les panneaux solaires photovoltaïques permettent de produire votre propre électricité et de réduire vos factures. En 2026, la prime à l'autoconsommation rend l'investissement encore plus attractif.
         </p>
 
         <img src="/illustrations/panneaux-solaires.svg" alt="Panneaux solaires sur toit" class="mt-8 w-full max-w-xl rounded-2xl" loading="lazy" />
 
-        <div class="mt-12 prose prose-lg max-w-none">
+        <div class="mt-12 prose prose-lg max-w-none fade-up">
           <h2 class="text-2xl font-heading font-bold text-text">Pourquoi installer des panneaux solaires ?</h2>
           <p>L'installation de panneaux solaires photovoltaïques est un investissement rentable qui vous permet de :</p>
           <ul>
@@ -51,33 +54,33 @@ const faqItems = [
           <p>Le prix dépend de la puissance installée, du type de pose (surimposition ou intégré au bâti) et de la complexité du chantier.</p>
         </div>
 
-        <div class="mt-8 overflow-x-auto">
+        <div class="mt-8 overflow-x-auto fade-up">
           <table class="w-full text-sm border-collapse">
             <thead>
-              <tr class="bg-primary text-white">
-                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Puissance</th>
+              <tr class="bg-gradient-to-r from-primary to-dark text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-xl">Puissance</th>
                 <th class="px-4 py-3 text-left font-semibold">Nb panneaux</th>
                 <th class="px-4 py-3 text-left font-semibold">Prix posé</th>
                 <th class="px-4 py-3 text-left font-semibold">Prime autoconso</th>
-                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Production/an</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-xl">Production/an</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-gray-100">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">3 kWc</td>
                 <td class="px-4 py-3">8-10</td>
                 <td class="px-4 py-3">7 000-10 000€</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">1 170€</td>
                 <td class="px-4 py-3">3 000-3 800 kWh</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">6 kWc</td>
                 <td class="px-4 py-3">15-18</td>
                 <td class="px-4 py-3">11 000-16 000€</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">1 560€</td>
                 <td class="px-4 py-3">6 000-7 600 kWh</td>
               </tr>
-              <tr>
+              <tr class="hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">9 kWc</td>
                 <td class="px-4 py-3">22-26</td>
                 <td class="px-4 py-3">15 000-22 000€</td>
@@ -88,7 +91,7 @@ const faqItems = [
           </table>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 fade-up">
           <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides pour les panneaux solaires</h2>
           <div class="grid sm:grid-cols-2 gap-4">
             <AideCard title="Prime autoconsommation" montant="260 à 390€/kWc" description="Prime versée à la mise en service." conditions="Autoconsommation avec vente surplus, installateur RGE" />

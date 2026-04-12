@@ -20,23 +20,26 @@ const faqItems = [
   title="Toutes les aides rénovation énergétique 2026 | Renoventis"
   description="Guide complet des aides rénovation énergétique 2026 : MaPrimeRénov, CEE, Éco-PTZ, aides locales. Montants, conditions et démarches."
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Aides rénovation' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
-          Toutes les aides rénovation énergétique en 2026
-        </h1>
-        <p class="mt-4 text-lg text-text-muted">
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+            Toutes les aides rénovation énergétique en 2026
+          </h1>
+        </div>
+        <p class="mt-4 text-lg text-text-muted leading-relaxed">
           En 2026, de nombreuses aides financent vos travaux de rénovation énergétique. Cumulables entre elles, elles peuvent couvrir jusqu'à 90% du montant des travaux.
         </p>
 
         <img src="/illustrations/aides-etat.svg" alt="Aides à la rénovation" class="mt-8 w-full max-w-xl rounded-2xl" loading="lazy" />
 
-        <div class="mt-12 space-y-12">
+        <div class="mt-12 space-y-12 fade-up">
           <!-- MaPrimeRénov -->
-          <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
+          <div class="card-premium p-6 md:p-8">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-accent-warm/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <span class="text-xl">🏛️</span>
@@ -68,25 +71,25 @@ const faqItems = [
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border-b border-gray-100">
+                  <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                     <td class="px-3 py-2 font-medium text-accent-warm">Très modestes</td>
                     <td class="px-3 py-2">25€/m²</td>
                     <td class="px-3 py-2">5 000€</td>
                     <td class="px-3 py-2">5 000€</td>
                   </tr>
-                  <tr class="border-b border-gray-100">
+                  <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                     <td class="px-3 py-2 font-medium text-accent">Modestes</td>
                     <td class="px-3 py-2">20€/m²</td>
                     <td class="px-3 py-2">4 000€</td>
                     <td class="px-3 py-2">4 000€</td>
                   </tr>
-                  <tr class="border-b border-gray-100">
+                  <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                     <td class="px-3 py-2 font-medium">Intermédiaires</td>
                     <td class="px-3 py-2">15€/m²</td>
                     <td class="px-3 py-2">3 000€</td>
                     <td class="px-3 py-2">2 500€</td>
                   </tr>
-                  <tr>
+                  <tr class="hover:bg-surface/50 transition-colors">
                     <td class="px-3 py-2 font-medium text-text-muted">Supérieurs</td>
                     <td class="px-3 py-2">7€/m²</td>
                     <td class="px-3 py-2">2 000€</td>
@@ -99,7 +102,7 @@ const faqItems = [
           </div>
 
           <!-- CEE -->
-          <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
+          <div class="card-premium p-6 md:p-8">
             <h2 class="text-2xl font-heading font-bold text-text">Certificats d'Économie d'Énergie (CEE)</h2>
             <p class="text-accent-warm font-heading font-bold text-lg mt-1">Jusqu'à 4 000€</p>
             <div class="mt-4 prose max-w-none">
@@ -115,7 +118,7 @@ const faqItems = [
           </div>
 
           <!-- Éco-PTZ -->
-          <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
+          <div class="card-premium p-6 md:p-8">
             <h2 class="text-2xl font-heading font-bold text-text">Éco-PTZ (Prêt à taux zéro)</h2>
             <p class="text-accent-warm font-heading font-bold text-lg mt-1">Jusqu'à 50 000€</p>
             <div class="mt-4 prose max-w-none">
@@ -131,7 +134,7 @@ const faqItems = [
           </div>
 
           <!-- Aides locales -->
-          <div class="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
+          <div class="card-premium p-6 md:p-8">
             <h2 class="text-2xl font-heading font-bold text-text">Aides locales et régionales</h2>
             <p class="text-accent-warm font-heading font-bold text-lg mt-1">Variables selon localisation</p>
             <div class="mt-4 prose max-w-none">

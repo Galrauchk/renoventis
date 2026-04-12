@@ -20,27 +20,27 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label for="contact-nom" class="block text-sm font-medium text-text mb-1">Nom</label>
-          <input type="text" id="contact-nom" name="nom" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" />
+          <input type="text" id="contact-nom" name="nom" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-accent/20 focus:border-accent focus:bg-white outline-none transition-all duration-200" />
         </div>
         <div>
           <label for="contact-email" class="block text-sm font-medium text-text mb-1">Email</label>
-          <input type="email" id="contact-email" name="email" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" />
+          <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-accent/20 focus:border-accent focus:bg-white outline-none transition-all duration-200" />
         </div>
       </div>
       <div>
         <label for="contact-sujet" class="block text-sm font-medium text-text mb-1">Sujet</label>
-        <input type="text" id="contact-sujet" name="sujet" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" />
+        <input type="text" id="contact-sujet" name="sujet" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-accent/20 focus:border-accent focus:bg-white outline-none transition-all duration-200" />
       </div>
       <div>
         <label for="contact-message" class="block text-sm font-medium text-text mb-1">Message</label>
-        <textarea id="contact-message" name="message" rows="5" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none resize-y"></textarea>
+        <textarea id="contact-message" name="message" rows="5" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-accent/20 focus:border-accent focus:bg-white outline-none transition-all duration-200 resize-y"></textarea>
       </div>
       <!-- Honeypot anti-bot -->
       <div class="hidden" aria-hidden="true">
         <label for="contact-website">Ne pas remplir</label>
         <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
       </div>
-      <button type="submit" class="px-8 py-3 text-sm font-semibold text-white bg-primary hover:bg-dark rounded-lg transition-colors">
+      <button type="submit" class="px-8 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-dark rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
         Envoyer le message
       </button>
     </form>

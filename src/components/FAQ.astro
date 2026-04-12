@@ -30,10 +30,12 @@ const jsonLd = {
   <h2 class="text-2xl md:text-3xl font-heading font-bold text-text mb-8">{title}</h2>
   <div class="space-y-3">
     {items.map((item, i) => (
-      <details class="group bg-white rounded-xl border border-gray-100 overflow-hidden">
-        <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface transition-colors">
+      <details class="group card-premium overflow-hidden">
+        <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-surface/50 transition-all duration-200">
           <span class="text-base font-medium text-text pr-4">{item.question}</span>
-          <svg class="w-5 h-5 text-text-muted flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <div class="w-8 h-8 rounded-lg bg-accent/10 group-open:bg-accent/20 flex items-center justify-center flex-shrink-0 transition-colors">
+            <svg class="w-4 h-4 text-accent flex-shrink-0 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
         </summary>
         <div class="px-5 pb-5 text-sm text-text-muted leading-relaxed">{item.answer}</div>
       </details>

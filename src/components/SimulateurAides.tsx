@@ -35,19 +35,26 @@ export default function SimulateurAides() {
     setResult({ mpr, cee, ecoPtz });
   }
 
-  return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 shadow-lg">
-      <h3 className="text-xl font-bold mb-6" style={{ fontFamily: 'Urbanist, sans-serif', color: '#1B2521' }}>
-        Estimez vos aides en 30 secondes
-      </h3>
+  const inputClass = "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none transition-all duration-200 focus:border-[#52B788] focus:ring-2 focus:ring-[#52B788]/20 focus:bg-white";
 
-      <div className="space-y-4">
+  return (
+    <div className="bg-white rounded-2xl p-6 md:p-8">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#52B788] to-[#2D6A4F] flex items-center justify-center">
+          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+        </div>
+        <h3 className="text-xl font-bold" style={{ fontFamily: 'Urbanist, sans-serif', color: '#1B2521' }}>
+          Simulateur d'aides
+        </h3>
+      </div>
+
+      <div className="space-y-5">
         <div>
-          <label className="block text-sm font-medium mb-1" style={{ color: '#1B2521' }}>Type de travaux</label>
+          <label className="block text-sm font-semibold mb-2" style={{ color: '#1B2521' }}>Type de travaux</label>
           <select
             value={travaux}
             onChange={e => setTravaux(e.target.value)}
-            className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm outline-none"
+            className={inputClass}
             style={{ color: '#1B2521' }}
           >
             <option value="">Sélectionnez vos travaux</option>
@@ -58,23 +65,23 @@ export default function SimulateurAides() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1" style={{ color: '#1B2521' }}>Surface habitable (m²)</label>
+          <label className="block text-sm font-semibold mb-2" style={{ color: '#1B2521' }}>Surface habitable (m²)</label>
           <input
             type="number"
             value={surface}
             onChange={e => setSurface(Number(e.target.value))}
-            className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm outline-none"
+            className={inputClass}
             min={10}
             max={500}
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1" style={{ color: '#1B2521' }}>Revenus fiscaux</label>
+          <label className="block text-sm font-semibold mb-2" style={{ color: '#1B2521' }}>Revenus fiscaux</label>
           <select
             value={revenus}
             onChange={e => setRevenus(e.target.value)}
-            className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm outline-none"
+            className={inputClass}
             style={{ color: '#1B2521' }}
           >
             <option value="">Sélectionnez votre tranche</option>
@@ -88,52 +95,53 @@ export default function SimulateurAides() {
         <button
           onClick={calculate}
           disabled={!travaux || !revenus}
-          className="w-full py-3 px-6 text-sm font-semibold text-white rounded-lg transition-colors disabled:opacity-50"
-          style={{ backgroundColor: '#52B788' }}
+          className="w-full py-3.5 px-6 text-sm font-bold text-white rounded-xl transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#52B788]/25 hover:-translate-y-0.5 active:translate-y-0"
+          style={{ background: 'linear-gradient(135deg, #52B788, #2D6A4F)' }}
         >
           Calculer mes aides
         </button>
       </div>
 
       {result && (
-        <div className="mt-6 p-5 rounded-xl" style={{ backgroundColor: '#F0FAF4' }}>
+        <div className="mt-6 p-5 rounded-2xl border border-[#52B788]/20" style={{ backgroundColor: '#F8FBF9' }}>
           <h4 className="text-lg font-bold mb-4" style={{ fontFamily: 'Urbanist, sans-serif', color: '#1B2521' }}>
             Estimation de vos aides
           </h4>
-          <div className="space-y-3">
-            <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-              <span className="text-sm font-medium" style={{ color: '#1B2521' }}>MaPrimeRénov&apos;</span>
-              <span className="text-lg font-bold" style={{ fontFamily: 'Urbanist, sans-serif', color: '#F4A261' }}>
+          <div className="space-y-2.5">
+            <div className="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-100">
+              <span className="text-sm font-medium" style={{ color: '#5F6B66' }}>MaPrimeRénov&apos;</span>
+              <span className="text-lg font-extrabold" style={{ fontFamily: 'Urbanist, sans-serif', color: '#F4A261' }}>
                 {result.mpr.toLocaleString('fr-FR')} €
               </span>
             </div>
-            <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-              <span className="text-sm font-medium" style={{ color: '#1B2521' }}>CEE (primes énergie)</span>
-              <span className="text-lg font-bold" style={{ fontFamily: 'Urbanist, sans-serif', color: '#F4A261' }}>
+            <div className="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-100">
+              <span className="text-sm font-medium" style={{ color: '#5F6B66' }}>CEE (primes énergie)</span>
+              <span className="text-lg font-extrabold" style={{ fontFamily: 'Urbanist, sans-serif', color: '#F4A261' }}>
                 {result.cee.toLocaleString('fr-FR')} €
               </span>
             </div>
-            <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-              <span className="text-sm font-medium" style={{ color: '#1B2521' }}>Éco-PTZ</span>
-              <span className="text-sm font-bold" style={{ color: result.ecoPtz ? '#52B788' : '#6B7280' }}>
+            <div className="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-100">
+              <span className="text-sm font-medium" style={{ color: '#5F6B66' }}>Éco-PTZ</span>
+              <span className="text-sm font-bold" style={{ color: result.ecoPtz ? '#52B788' : '#5F6B66' }}>
                 {result.ecoPtz ? 'Éligible (jusqu\'à 50 000€)' : 'Non éligible'}
               </span>
             </div>
-            <div className="flex items-center justify-between p-4 rounded-lg" style={{ backgroundColor: '#1B4332' }}>
-              <span className="text-sm font-semibold text-white">Total estimé</span>
-              <span className="text-xl font-bold text-white" style={{ fontFamily: 'Urbanist, sans-serif' }}>
+            <div className="flex items-center justify-between p-4 rounded-xl" style={{ background: 'linear-gradient(135deg, #1B4332, #081C15)' }}>
+              <span className="text-sm font-semibold text-white/80">Total estimé</span>
+              <span className="text-2xl font-extrabold text-white" style={{ fontFamily: 'Urbanist, sans-serif' }}>
                 {(result.mpr + result.cee).toLocaleString('fr-FR')} €
               </span>
             </div>
           </div>
           <a
             href="/devis/"
-            className="mt-4 block text-center py-3 px-6 text-sm font-semibold text-white rounded-lg transition-colors"
-            style={{ backgroundColor: '#F4A261' }}
+            className="mt-5 flex items-center justify-center gap-2 py-3.5 px-6 text-sm font-bold text-white rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/25 hover:-translate-y-0.5"
+            style={{ background: 'linear-gradient(135deg, #F4A261, #E76F51)' }}
           >
             Obtenir 3 devis gratuits
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
           </a>
-          <p className="mt-3 text-xs text-center" style={{ color: '#6B7280' }}>
+          <p className="mt-3 text-xs text-center" style={{ color: '#5F6B66' }}>
             Montants indicatifs. Les aides réelles dépendent de votre situation.
           </p>
         </div>

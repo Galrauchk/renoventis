@@ -31,101 +31,106 @@ const faqItems = [
   description="Guide complet isolation thermique 2026 : combles, murs, sol, fenêtres. Prix au m², aides MaPrimeRénov et CEE, artisans RGE certifiés."
   jsonLd={jsonLd}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Isolation thermique' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
-          Isolation thermique 2026 : aides, prix et artisans RGE
-        </h1>
-        <p class="mt-4 text-lg text-text-muted">
-          L'isolation est le premier geste de rénovation énergétique. Elle permet de réduire jusqu'à 60% de vos déperditions de chaleur et de bénéficier d'aides conséquentes.
-        </p>
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text leading-tight">
+            Isolation thermique 2026 : aides, prix et artisans RGE
+          </h1>
+          <p class="mt-5 text-lg text-text-muted leading-relaxed">
+            L'isolation est le premier geste de rénovation énergétique. Elle permet de réduire jusqu'à 60% de vos déperditions de chaleur et de bénéficier d'aides conséquentes.
+          </p>
+        </div>
 
-        <img src="/illustrations/isolation.svg" alt="Isolation thermique d'une maison" class="mt-8 w-full max-w-xl rounded-2xl" loading="lazy" />
+        <div class="mt-10 fade-up" style="transition-delay: 0.1s;">
+          <img src="/illustrations/isolation.svg" alt="Isolation thermique d'une maison" class="w-full max-w-xl rounded-2xl" loading="lazy" />
+        </div>
 
-        <div class="mt-12 prose prose-lg max-w-none">
+        <div class="mt-14 prose-premium">
           <h2 class="text-2xl font-heading font-bold text-text">Pourquoi isoler son logement ?</h2>
           <p>L'isolation thermique est la première étape incontournable de toute rénovation énergétique. Dans un logement mal isolé, les déperditions de chaleur se répartissent ainsi :</p>
-          <ul>
-            <li><strong>Toiture et combles :</strong> 25 à 30% des pertes de chaleur</li>
-            <li><strong>Murs :</strong> 20 à 25% des pertes</li>
-            <li><strong>Fenêtres :</strong> 10 à 15% des pertes</li>
-            <li><strong>Plancher bas :</strong> 7 à 10% des pertes</li>
-            <li><strong>Ponts thermiques :</strong> 5 à 10% des pertes</li>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0"></span><span class="text-text-muted"><strong class="text-text">Toiture et combles :</strong> 25 à 30% des pertes de chaleur</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0"></span><span class="text-text-muted"><strong class="text-text">Murs :</strong> 20 à 25% des pertes</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0"></span><span class="text-text-muted"><strong class="text-text">Fenêtres :</strong> 10 à 15% des pertes</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0"></span><span class="text-text-muted"><strong class="text-text">Plancher bas :</strong> 7 à 10% des pertes</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0"></span><span class="text-text-muted"><strong class="text-text">Ponts thermiques :</strong> 5 à 10% des pertes</span></li>
           </ul>
 
-          <h2 class="text-2xl font-heading font-bold text-text">Les types d'isolation</h2>
+          <h2 class="text-2xl font-heading font-bold text-text mt-12">Les types d'isolation</h2>
 
-          <h3 class="text-xl font-heading font-bold text-text">Isolation des combles perdus</h3>
-          <p>La technique la plus rapide et la plus rentable. Le soufflage de laine minérale permet d'isoler en quelques heures pour un coût modéré de 20 à 35€/m². C'est le meilleur rapport performance/prix.</p>
+          <h3 class="text-xl font-heading font-bold text-text mt-8">Isolation des combles perdus</h3>
+          <p class="text-text-muted leading-relaxed">La technique la plus rapide et la plus rentable. Le soufflage de laine minérale permet d'isoler en quelques heures pour un coût modéré de 20 à 35€/m². C'est le meilleur rapport performance/prix.</p>
 
-          <h3 class="text-xl font-heading font-bold text-text">Isolation des murs par l'extérieur (ITE)</h3>
-          <p>L'ITE supprime les ponts thermiques et ne réduit pas la surface habitable. Coût : 120 à 200€/m², mais les aides peuvent couvrir jusqu'à 75€/m² via MaPrimeRénov'.</p>
+          <h3 class="text-xl font-heading font-bold text-text mt-8">Isolation des murs par l'extérieur (ITE)</h3>
+          <p class="text-text-muted leading-relaxed">L'ITE supprime les ponts thermiques et ne réduit pas la surface habitable. Coût : 120 à 200€/m², mais les aides peuvent couvrir jusqu'à 75€/m² via MaPrimeRénov'.</p>
 
-          <h3 class="text-xl font-heading font-bold text-text">Isolation des murs par l'intérieur (ITI)</h3>
-          <p>Solution plus économique (40 à 80€/m²) qui réduit légèrement la surface habitable. Idéale quand l'ITE n'est pas possible (façade classée, copropriété).</p>
+          <h3 class="text-xl font-heading font-bold text-text mt-8">Isolation des murs par l'intérieur (ITI)</h3>
+          <p class="text-text-muted leading-relaxed">Solution plus économique (40 à 80€/m²) qui réduit légèrement la surface habitable. Idéale quand l'ITE n'est pas possible (façade classée, copropriété).</p>
 
-          <h3 class="text-xl font-heading font-bold text-text">Isolation du plancher bas</h3>
-          <p>Souvent négligée, l'isolation du sol permet de gagner en confort et de réduire la sensation de froid. Coût : 30 à 60€/m².</p>
+          <h3 class="text-xl font-heading font-bold text-text mt-8">Isolation du plancher bas</h3>
+          <p class="text-text-muted leading-relaxed">Souvent négligée, l'isolation du sol permet de gagner en confort et de réduire la sensation de froid. Coût : 30 à 60€/m².</p>
 
-          <h3 class="text-xl font-heading font-bold text-text">Remplacement des fenêtres</h3>
-          <p>Le passage en double ou triple vitrage améliore le confort acoustique et thermique. Comptez 500 à 1 200€ par fenêtre, aides déduites.</p>
+          <h3 class="text-xl font-heading font-bold text-text mt-8">Remplacement des fenêtres</h3>
+          <p class="text-text-muted leading-relaxed">Le passage en double ou triple vitrage améliore le confort acoustique et thermique. Comptez 500 à 1 200€ par fenêtre, aides déduites.</p>
 
-          <h2 class="text-2xl font-heading font-bold text-text">Prix de l'isolation par type de travaux</h2>
+          <h2 class="text-2xl font-heading font-bold text-text mt-12">Prix de l'isolation par type de travaux</h2>
         </div>
 
         <!-- Tableau prix -->
-        <div class="mt-8 overflow-x-auto">
-          <table class="w-full text-sm border-collapse">
+        <div class="mt-8 overflow-x-auto fade-up">
+          <table class="w-full text-sm">
             <thead>
-              <tr class="bg-primary text-white">
-                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Type d'isolation</th>
-                <th class="px-4 py-3 text-left font-semibold">Prix au m²</th>
-                <th class="px-4 py-3 text-left font-semibold">Aide MaPrimeRénov'</th>
-                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Économies</th>
+              <tr class="bg-gradient-to-r from-primary to-dark text-white">
+                <th class="px-5 py-4 text-left font-semibold rounded-tl-xl">Type d'isolation</th>
+                <th class="px-5 py-4 text-left font-semibold">Prix au m²</th>
+                <th class="px-5 py-4 text-left font-semibold">Aide MaPrimeRénov'</th>
+                <th class="px-5 py-4 text-left font-semibold rounded-tr-xl">Économies</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-gray-100">
-                <td class="px-4 py-3 font-medium">Combles perdus</td>
-                <td class="px-4 py-3">20-60€/m²</td>
-                <td class="px-4 py-3 text-accent-warm font-semibold">25€/m²</td>
-                <td class="px-4 py-3">25-30%</td>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-surface/50 transition-colors">
+                <td class="px-5 py-4 font-medium text-text">Combles perdus</td>
+                <td class="px-5 py-4 text-text-muted">20-60€/m²</td>
+                <td class="px-5 py-4 font-bold text-accent-warm">25€/m²</td>
+                <td class="px-5 py-4 text-text-muted">25-30%</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
-                <td class="px-4 py-3 font-medium">Murs extérieur (ITE)</td>
-                <td class="px-4 py-3">120-200€/m²</td>
-                <td class="px-4 py-3 text-accent-warm font-semibold">75€/m²</td>
-                <td class="px-4 py-3">20-25%</td>
+              <tr class="hover:bg-surface/50 transition-colors">
+                <td class="px-5 py-4 font-medium text-text">Murs extérieur (ITE)</td>
+                <td class="px-5 py-4 text-text-muted">120-200€/m²</td>
+                <td class="px-5 py-4 font-bold text-accent-warm">75€/m²</td>
+                <td class="px-5 py-4 text-text-muted">20-25%</td>
               </tr>
-              <tr class="border-b border-gray-100">
-                <td class="px-4 py-3 font-medium">Murs intérieur (ITI)</td>
-                <td class="px-4 py-3">40-80€/m²</td>
-                <td class="px-4 py-3 text-accent-warm font-semibold">25€/m²</td>
-                <td class="px-4 py-3">15-20%</td>
+              <tr class="hover:bg-surface/50 transition-colors">
+                <td class="px-5 py-4 font-medium text-text">Murs intérieur (ITI)</td>
+                <td class="px-5 py-4 text-text-muted">40-80€/m²</td>
+                <td class="px-5 py-4 font-bold text-accent-warm">25€/m²</td>
+                <td class="px-5 py-4 text-text-muted">15-20%</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
-                <td class="px-4 py-3 font-medium">Plancher bas</td>
-                <td class="px-4 py-3">30-60€/m²</td>
-                <td class="px-4 py-3 text-accent-warm font-semibold">15€/m²</td>
-                <td class="px-4 py-3">7-10%</td>
+              <tr class="hover:bg-surface/50 transition-colors">
+                <td class="px-5 py-4 font-medium text-text">Plancher bas</td>
+                <td class="px-5 py-4 text-text-muted">30-60€/m²</td>
+                <td class="px-5 py-4 font-bold text-accent-warm">15€/m²</td>
+                <td class="px-5 py-4 text-text-muted">7-10%</td>
               </tr>
-              <tr>
-                <td class="px-4 py-3 font-medium">Fenêtres double vitrage</td>
-                <td class="px-4 py-3">500-1200€/unité</td>
-                <td class="px-4 py-3 text-accent-warm font-semibold">100€/unité</td>
-                <td class="px-4 py-3">10-15%</td>
+              <tr class="hover:bg-surface/50 transition-colors">
+                <td class="px-5 py-4 font-medium text-text">Fenêtres double vitrage</td>
+                <td class="px-5 py-4 text-text-muted">500-1200€/unité</td>
+                <td class="px-5 py-4 font-bold text-accent-warm">100€/unité</td>
+                <td class="px-5 py-4 text-text-muted">10-15%</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <!-- Aides -->
-        <div class="mt-12">
+        <div class="mt-14 fade-up">
           <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides disponibles pour l'isolation</h2>
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid sm:grid-cols-2 gap-5">
             <AideCard title="MaPrimeRénov'" montant="25 à 75€/m²" description="Selon le type d'isolation et vos revenus." conditions="Logement de plus de 15 ans, artisan RGE" href="/aides-renovation/" />
             <AideCard title="CEE" montant="10 à 20€/m²" description="Prime énergie cumulable avec MaPrimeRénov'." conditions="Aucune condition de revenus" href="/guides/cee-certificats-energie/" />
             <AideCard title="Éco-PTZ" montant="Jusqu'à 50 000€" description="Prêt sans intérêt pour financer le reste à charge." conditions="Sans condition de revenus" href="/guides/eco-ptz-conditions-2026/" />
@@ -141,13 +146,13 @@ const faqItems = [
         <div class="sticky top-24 space-y-6">
           <LeadGenForm travaux="Isolation thermique" title="Devis isolation gratuits" />
 
-          <div class="bg-white rounded-2xl border border-gray-100 p-6">
+          <div class="card-premium p-6">
             <h3 class="text-lg font-heading font-bold text-text mb-4">Guides isolation</h3>
             <ul class="space-y-3">
-              <li><a href="/guides/isolation-combles-perdus-prix/" class="text-sm text-primary hover:text-accent transition-colors">Isolation combles : prix 2026</a></li>
-              <li><a href="/guides/isolation-murs-exterieurs-prix/" class="text-sm text-primary hover:text-accent transition-colors">ITE : prix et aides 2026</a></li>
-              <li><a href="/guides/dpe-logement-ameliorer/" class="text-sm text-primary hover:text-accent transition-colors">Améliorer son DPE</a></li>
-              <li><a href="/guides/renovation-energetique-ordre-travaux/" class="text-sm text-primary hover:text-accent transition-colors">Ordre des travaux</a></li>
+              <li><a href="/guides/isolation-combles-perdus-prix/" class="text-sm text-primary hover:text-accent transition-colors flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Isolation combles : prix 2026</a></li>
+              <li><a href="/guides/isolation-murs-exterieurs-prix/" class="text-sm text-primary hover:text-accent transition-colors flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>ITE : prix et aides 2026</a></li>
+              <li><a href="/guides/dpe-logement-ameliorer/" class="text-sm text-primary hover:text-accent transition-colors flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Améliorer son DPE</a></li>
+              <li><a href="/guides/renovation-energetique-ordre-travaux/" class="text-sm text-primary hover:text-accent transition-colors flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>Ordre des travaux</a></li>
             </ul>
           </div>
         </div>

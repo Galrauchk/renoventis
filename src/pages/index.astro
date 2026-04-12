@@ -30,12 +30,12 @@ const jsonLd = [
 ];
 
 const travaux = [
-  { title: 'Isolation thermique', description: 'Combles, murs, sol et fenêtres — réduisez les déperditions de chaleur', href: '/isolation/', illustration: '/illustrations/isolation.svg', aideMontant: '75€/m²' },
-  { title: 'Pompe à chaleur', description: 'PAC air/eau, air/air et géothermique — chauffage performant', href: '/pompe-a-chaleur/', illustration: '/illustrations/pompe-chaleur.svg', aideMontant: '5 000€' },
-  { title: 'Panneaux solaires', description: 'Photovoltaïque et autoconsommation — produisez votre énergie', href: '/panneaux-solaires/', illustration: '/illustrations/panneaux-solaires.svg', aideMontant: '2 340€' },
-  { title: 'Chaudière biomasse', description: 'Granulés et bûches — un chauffage économique et écologique', href: '/chaudiere-biomasse/', illustration: '/illustrations/artisan-rge.svg', aideMontant: '5 000€' },
-  { title: 'VMC double flux', description: 'Ventilation performante pour un air sain et des économies', href: '/ventilation-vmc/', illustration: '/illustrations/pompe-chaleur.svg', aideMontant: '2 500€' },
-  { title: 'Améliorer son DPE', description: 'Passez de G à B — les travaux les plus rentables', href: '/guides/dpe-logement-ameliorer/', illustration: '/illustrations/dpe-amelioration.svg', aideMontant: '70% d\'aides' },
+  { title: 'Isolation thermique', description: 'Combles, murs, sol et fenêtres — réduisez les déperditions de chaleur', href: '/isolation/', icon: 'shield', aideMontant: '75€/m²' },
+  { title: 'Pompe à chaleur', description: 'PAC air/eau, air/air et géothermique — chauffage performant', href: '/pompe-a-chaleur/', icon: 'flame', aideMontant: '5 000€' },
+  { title: 'Panneaux solaires', description: 'Photovoltaïque et autoconsommation — produisez votre énergie', href: '/panneaux-solaires/', icon: 'sun', aideMontant: '2 340€' },
+  { title: 'Chaudière biomasse', description: 'Granulés et bûches — un chauffage économique et écologique', href: '/chaudiere-biomasse/', icon: 'tree', aideMontant: '5 000€' },
+  { title: 'VMC double flux', description: 'Ventilation performante pour un air sain et des économies', href: '/ventilation-vmc/', icon: 'wind', aideMontant: '2 500€' },
+  { title: 'Améliorer son DPE', description: 'Passez de G à B — les travaux les plus rentables', href: '/guides/dpe-logement-ameliorer/', icon: 'chart', aideMontant: '70% d\'aides' },
 ];
 ---
 
@@ -44,210 +44,288 @@ const travaux = [
   description="Renoventis vous accompagne dans votre rénovation énergétique : guides MaPrimeRénov 2026, simulateur d'aides, devis gratuits d'artisans RGE certifiés."
   jsonLd={jsonLd}
 >
-  <!-- HERO -->
-  <section class="relative bg-gradient-to-br from-primary to-dark overflow-hidden">
-    <!-- Geometric overlay -->
-    <div class="absolute inset-0 opacity-10">
-      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="hexagons" width="56" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-            <path d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100" fill="none" stroke="white" stroke-width="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hexagons)"/>
-      </svg>
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="relative overflow-hidden min-h-[92vh] flex items-center hero-section">
+    <!-- Photo background -->
+    <div class="absolute inset-0">
+      <img src="/images/hero-renovation.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <!-- Badge urgence -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent-warm/20 border border-accent-warm/30 rounded-full mb-6">
-            <span class="w-2 h-2 bg-accent-warm rounded-full animate-pulse"></span>
-            <span class="text-sm font-medium text-accent-warm">MaPrimeRénov' disponible en 2026</span>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-40">
+      <div class="max-w-3xl">
+        <div class="fade-up">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            </span>
+            <span class="text-sm font-medium text-white/90 tracking-wide">MaPrimeRénov' 2026 — Aides disponibles</span>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
-            Rénovez votre logement, réduisez vos factures jusqu'à <span class="text-accent">70%</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-white leading-[1.05] tracking-tight">
+            Rénovez votre logement,
+            <br />
+            <span class="hero-gradient-text">économisez jusqu'à 70%</span>
           </h1>
 
-          <p class="mt-6 text-lg text-white/80 max-w-xl">
-            Profitez des aides MaPrimeRénov', CEE et Éco-PTZ pour financer vos travaux. Mise en relation gratuite avec des artisans RGE certifiés.
+          <p class="mt-8 text-lg lg:text-xl text-white/60 max-w-2xl leading-relaxed font-light">
+            Guides experts, simulateur d'aides et mise en relation gratuite avec des artisans RGE certifiés. Financez jusqu'à 90% de vos travaux.
           </p>
 
-          <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/devis/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-xl transition-colors shadow-xl shadow-amber-500/25">
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="/devis/" class="group inline-flex items-center justify-center px-9 py-4.5 text-base font-bold text-dark bg-white hover:bg-gray-100 rounded-2xl transition-all duration-300 shadow-2xl shadow-black/10 hover:-translate-y-0.5">
               Obtenir des devis gratuits
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
-            <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:bg-white/10 rounded-xl transition-colors">
+            <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-9 py-4.5 text-base font-semibold text-white border border-white/20 hover:bg-white/10 rounded-2xl transition-all duration-300 backdrop-blur-sm">
               Calculer mes aides
             </a>
           </div>
-
-          <!-- Stats -->
-          <div class="mt-12 grid grid-cols-3 gap-6">
-            <div>
-              <p class="text-2xl md:text-3xl font-heading font-bold text-white">5M+</p>
-              <p class="text-sm text-white/60">logements rénovés</p>
-            </div>
-            <div>
-              <p class="text-2xl md:text-3xl font-heading font-bold text-accent">70%</p>
-              <p class="text-sm text-white/60">d'aides possibles</p>
-            </div>
-            <div>
-              <p class="text-2xl md:text-3xl font-heading font-bold text-accent-warm">3</p>
-              <p class="text-sm text-white/60">devis gratuits</p>
-            </div>
-          </div>
         </div>
 
-        <div class="hidden lg:block">
-          <img src="/illustrations/hero-maison.svg" alt="Maison rénovée avec panneaux solaires et bon DPE" class="w-full max-w-lg mx-auto drop-shadow-2xl" />
+        <!-- Stats -->
+        <div class="mt-20 grid grid-cols-3 gap-8 pt-10 border-t border-white/10">
+          <div class="fade-up" style="transition-delay: 0.1s;">
+            <p class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">5M<span class="text-accent">+</span></p>
+            <p class="mt-2 text-sm text-white/40 font-medium">logements rénovés en France</p>
+          </div>
+          <div class="fade-up" style="transition-delay: 0.2s;">
+            <p class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">70<span class="text-accent">%</span></p>
+            <p class="mt-2 text-sm text-white/40 font-medium">d'aides cumulables</p>
+          </div>
+          <div class="fade-up" style="transition-delay: 0.3s;">
+            <p class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">48<span class="text-accent-warm">h</span></p>
+            <p class="mt-2 text-sm text-white/40 font-medium">pour recevoir vos devis</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SIMULATEUR -->
-  <section class="py-16 lg:py-24 bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">
-            Estimez vos aides en <span class="text-accent">30 secondes</span>
+  <!-- ═══════════════════════════════════ SIMULATEUR ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -translate-y-1/2"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-6">Simulateur gratuit</span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text leading-tight">
+            Estimez vos aides en <span class="text-gradient">30 secondes</span>
           </h2>
-          <p class="mt-4 text-text-muted max-w-lg">
+          <p class="mt-5 text-lg text-text-muted leading-relaxed max-w-lg">
             Sélectionnez vos travaux et votre tranche de revenus pour obtenir une estimation de vos aides MaPrimeRénov', CEE et Éco-PTZ.
           </p>
-          <img src="/illustrations/economies.svg" alt="Économies sur les factures" class="mt-8 w-full max-w-sm hidden lg:block" loading="lazy" />
+          <div class="mt-10 hidden lg:grid grid-cols-2 gap-4">
+            <div class="card-premium p-5 text-center">
+              <p class="text-3xl font-heading font-extrabold text-gradient-warm">90%</p>
+              <p class="mt-1 text-xs text-text-muted">d'aides cumulables</p>
+            </div>
+            <div class="card-premium p-5 text-center">
+              <p class="text-3xl font-heading font-extrabold text-gradient">30s</p>
+              <p class="mt-1 text-xs text-text-muted">pour simuler</p>
+            </div>
+          </div>
         </div>
-        <SimulateurAides client:load />
+        <div class="fade-up" style="transition-delay: 0.15s;">
+          <div class="card-premium p-1 glow-accent">
+            <SimulateurAides client:load />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TRAVAUX -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Les travaux de rénovation énergétique</h2>
-        <p class="mt-4 text-text-muted">Découvrez les travaux les plus efficaces pour améliorer la performance énergétique de votre logement.</p>
+  <!-- ═══════════════════════════════════ TRAVAUX ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-30"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+        <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 rounded-lg mb-6">Nos expertises</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">Les travaux de rénovation énergétique</h2>
+        <p class="mt-5 text-lg text-text-muted">Découvrez les travaux les plus efficaces pour améliorer la performance de votre logement.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {travaux.map(t => <HubCard {...t} />)}
-      </div>
-    </div>
-  </section>
-
-  <!-- AIDES -->
-  <section class="py-16 lg:py-24 bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Les aides disponibles en 2026</h2>
-        <p class="mt-4 text-text-muted">Cumulez les aides pour financer jusqu'à 90% de vos travaux de rénovation.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <AideCard title="MaPrimeRénov'" montant="Jusqu'à 10 000€" description="Aide de l'État pour les propriétaires occupants et bailleurs." conditions="Logement de plus de 15 ans, artisan RGE obligatoire" href="/aides-renovation/" />
-        <AideCard title="CEE" montant="Jusqu'à 4 000€" description="Certificats d'économie d'énergie financés par les énergéticiens." conditions="Cumulable avec MaPrimeRénov', sans condition de revenus" href="/guides/cee-certificats-energie/" />
-        <AideCard title="Éco-PTZ" montant="Jusqu'à 50 000€" description="Prêt à taux zéro pour financer le reste à charge." conditions="Sans conditions de revenus, remboursement sur 20 ans max" href="/guides/eco-ptz-conditions-2026/" />
-        <AideCard title="Aides locales" montant="Variable" description="Aides régionales, départementales et communales complémentaires." conditions="Varient selon votre localisation géographique" href="/aides-renovation/" />
-      </div>
-    </div>
-  </section>
-
-  <!-- COMMENT ÇA MARCHE -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-text">Comment ça marche ?</h2>
-        <p class="mt-4 text-text-muted">3 étapes simples pour lancer vos travaux de rénovation.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-heading font-bold text-accent">1</span>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-text">Simulez vos aides</h3>
-          <p class="mt-2 text-sm text-text-muted">Estimez le montant de vos aides en quelques clics grâce à notre simulateur gratuit.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-accent-warm/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-heading font-bold text-accent-warm">2</span>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-text">Recevez 3 devis</h3>
-          <p class="mt-2 text-sm text-text-muted">Des artisans RGE certifiés de votre région vous contactent sous 48h avec leurs devis gratuits.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-heading font-bold text-primary">3</span>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-text">Travaux réalisés</h3>
-          <p class="mt-2 text-sm text-text-muted">Choisissez votre artisan et lancez vos travaux. Nous vous accompagnons dans les démarches d'aides.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONFIANCE -->
-  <section class="py-16 lg:py-24 bg-primary">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div>
-          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-white">Artisans RGE certifiés</h3>
-          <p class="mt-2 text-sm text-white/70">Tous nos artisans partenaires sont certifiés RGE, condition indispensable pour bénéficier des aides.</p>
-        </div>
-        <div>
-          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-white">Devis 100% gratuits</h3>
-          <p class="mt-2 text-sm text-white/70">Recevez jusqu'à 3 devis gratuits et sans engagement de la part d'artisans qualifiés de votre région.</p>
-        </div>
-        <div>
-          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </div>
-          <h3 class="text-lg font-heading font-bold text-white">Accompagnement dossier</h3>
-          <p class="mt-2 text-sm text-white/70">Nos artisans partenaires vous aident dans les démarches administratives pour obtenir vos aides.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARTICLES RÉCENTS -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-2xl md:text-3xl font-heading font-bold text-text">Guides et articles récents</h2>
-        <a href="/guides/" class="text-sm font-semibold text-primary hover:text-accent transition-colors">Voir tous les guides →</a>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {recentGuides.map(guide => (
-          <ArticleCard
-            title={guide.data.title}
-            description={guide.data.description}
-            href={`/guides/${guide.id}/`}
-            category={guide.data.category}
-            aideMontant={guide.data.aideMontant}
-          />
+        {travaux.map((t, i) => (
+          <a href={t.href} class="group card-premium p-7 relative overflow-hidden fade-up" style={`transition-delay: ${i * 0.08}s;`}>
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-accent/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:from-accent/10"></div>
+            {t.aideMontant && (
+              <span class="inline-flex items-center px-3 py-1 text-xs font-bold text-amber-700 bg-amber-50 rounded-lg mb-4">
+                Aide {t.aideMontant}
+              </span>
+            )}
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-dark flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              {t.icon === 'shield' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>}
+              {t.icon === 'flame' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>}
+              {t.icon === 'sun' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>}
+              {t.icon === 'tree' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>}
+              {t.icon === 'wind' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8h13a3 3 0 110 6h-4M3 16h9a3 3 0 010 6H9M3 12h5"/></svg>}
+              {t.icon === 'chart' && <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>}
+            </div>
+            <h3 class="text-lg font-heading font-bold text-text group-hover:text-primary transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-text-muted leading-relaxed">{t.description}</p>
+            <div class="mt-5 flex items-center text-sm font-semibold text-accent group-hover:text-primary transition-colors">
+              <span>En savoir plus</span>
+              <svg class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </div>
+          </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-primary to-dark">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white">Prêt à rénover votre logement ?</h2>
-      <p class="mt-4 text-lg text-white/80">Obtenez 3 devis gratuits d'artisans RGE certifiés et profitez des aides 2026.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/devis/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-xl transition-colors shadow-xl shadow-amber-500/25">
-          Demander mes devis gratuits
+  <!-- ═══════════════════════════════════ AIDES ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-warm/5 rounded-full blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+        <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-warm bg-accent-warm/10 rounded-lg mb-6">Financements</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">Les aides disponibles en 2026</h2>
+        <p class="mt-5 text-lg text-text-muted">Cumulez les aides pour financer jusqu'à 90% de vos travaux de rénovation.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="fade-up" style="transition-delay: 0s;">
+          <AideCard title="MaPrimeRénov'" montant="Jusqu'à 10 000€" description="Aide de l'État pour les propriétaires occupants et bailleurs." conditions="Logement de plus de 15 ans, artisan RGE obligatoire" href="/aides-renovation/" />
+        </div>
+        <div class="fade-up" style="transition-delay: 0.08s;">
+          <AideCard title="CEE" montant="Jusqu'à 4 000€" description="Certificats d'économie d'énergie financés par les énergéticiens." conditions="Cumulable avec MaPrimeRénov', sans condition de revenus" href="/guides/cee-certificats-energie/" />
+        </div>
+        <div class="fade-up" style="transition-delay: 0.16s;">
+          <AideCard title="Éco-PTZ" montant="Jusqu'à 50 000€" description="Prêt à taux zéro pour financer le reste à charge." conditions="Sans conditions de revenus, remboursement sur 20 ans max" href="/guides/eco-ptz-conditions-2026/" />
+        </div>
+        <div class="fade-up" style="transition-delay: 0.24s;">
+          <AideCard title="Aides locales" montant="Variable" description="Aides régionales, départementales et communales complémentaires." conditions="Varient selon votre localisation géographique" href="/aides-renovation/" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ COMMENT ÇA MARCHE ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32 bg-surface relative overflow-hidden">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+        <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 rounded-lg mb-6">Processus</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">Comment ça marche ?</h2>
+        <p class="mt-5 text-lg text-text-muted">3 étapes simples pour lancer vos travaux de rénovation.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="fade-up text-center" style="transition-delay: 0s;">
+          <div class="relative w-20 h-20 mx-auto mb-6">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl rotate-6"></div>
+            <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-accent/10 flex items-center justify-center">
+              <span class="text-3xl font-heading font-extrabold text-gradient">1</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-text">Simulez vos aides</h3>
+          <p class="mt-3 text-sm text-text-muted leading-relaxed max-w-xs mx-auto">Estimez le montant de vos aides en quelques clics grâce à notre simulateur gratuit.</p>
+        </div>
+        <div class="fade-up text-center" style="transition-delay: 0.1s;">
+          <div class="relative w-20 h-20 mx-auto mb-6">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-warm/20 to-accent-warm/5 rounded-3xl rotate-6"></div>
+            <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-amber-500/10 flex items-center justify-center">
+              <span class="text-3xl font-heading font-extrabold text-gradient-warm">2</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-text">Recevez 3 devis</h3>
+          <p class="mt-3 text-sm text-text-muted leading-relaxed max-w-xs mx-auto">Des artisans RGE certifiés de votre région vous contactent sous 48h avec leurs devis gratuits.</p>
+        </div>
+        <div class="fade-up text-center" style="transition-delay: 0.2s;">
+          <div class="relative w-20 h-20 mx-auto mb-6">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl rotate-6"></div>
+            <div class="relative w-full h-full bg-white rounded-3xl shadow-lg shadow-primary/10 flex items-center justify-center">
+              <span class="text-3xl font-heading font-extrabold text-primary">3</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-text">Travaux réalisés</h3>
+          <p class="mt-3 text-sm text-text-muted leading-relaxed max-w-xs mx-auto">Choisissez votre artisan et lancez vos travaux. Nous vous accompagnons dans les démarches d'aides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CONFIANCE ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32 bg-mesh-hero relative overflow-hidden noise">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="fade-up text-center">
+          <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-white">Artisans RGE certifiés</h3>
+          <p class="mt-3 text-sm text-white/60 leading-relaxed max-w-xs mx-auto">Tous nos artisans partenaires sont certifiés RGE, condition indispensable pour bénéficier des aides.</p>
+        </div>
+        <div class="fade-up text-center" style="transition-delay: 0.1s;">
+          <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-white">Devis 100% gratuits</h3>
+          <p class="mt-3 text-sm text-white/60 leading-relaxed max-w-xs mx-auto">Recevez jusqu'à 3 devis gratuits et sans engagement de la part d'artisans qualifiés de votre région.</p>
+        </div>
+        <div class="fade-up text-center" style="transition-delay: 0.2s;">
+          <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-white">Accompagnement dossier</h3>
+          <p class="mt-3 text-sm text-white/60 leading-relaxed max-w-xs mx-auto">Nos artisans partenaires vous aident dans les démarches administratives pour obtenir vos aides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ ARTICLES ═══════════════════════════════════ -->
+  <section class="py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12 fade-up">
+        <div>
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 rounded-lg mb-4">Blog</span>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold text-text">Guides et articles récents</h2>
+        </div>
+        <a href="/guides/" class="hidden sm:inline-flex items-center text-sm font-semibold text-primary hover:text-accent transition-colors group">
+          Voir tous les guides
+          <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
-        <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:bg-white/10 rounded-xl transition-colors">
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentGuides.map((guide, i) => (
+          <div class="fade-up" style={`transition-delay: ${i * 0.08}s;`}>
+            <ArticleCard
+              title={guide.data.title}
+              description={guide.data.description}
+              href={`/guides/${guide.id}/`}
+              category={guide.data.category}
+              aideMontant={guide.data.aideMontant}
+            />
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href="/guides/" class="inline-flex items-center text-sm font-semibold text-primary hover:text-accent transition-colors">
+          Voir tous les guides
+          <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CTA FINAL ═══════════════════════════════════ -->
+  <section class="py-24 lg:py-36 bg-mesh-hero relative overflow-hidden">
+    <!-- Orbs -->
+    <div class="absolute top-10 right-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-10 left-20 w-48 h-48 bg-accent-warm/10 rounded-full blur-3xl animate-float" style="animation-delay: -4s;"></div>
+
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight">
+        Prêt à rénover votre logement ?
+      </h2>
+      <p class="mt-6 text-lg lg:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">Obtenez 3 devis gratuits d'artisans RGE certifiés et profitez des aides 2026.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/devis/" class="group inline-flex items-center justify-center px-10 py-5 text-base font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-2xl transition-all duration-300 shadow-2xl shadow-amber-500/25 hover:-translate-y-1">
+          Demander mes devis gratuits
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <a href="/simulateurs/aides-renovation/" class="inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-white glass hover:bg-white/10 rounded-2xl transition-all duration-300">
           Simuler mes aides
         </a>
       </div>

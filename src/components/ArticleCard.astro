@@ -10,15 +10,20 @@ interface Props {
 const { title, description, href, category, aideMontant } = Astro.props;
 ---
 
-<a href={href} class="group block bg-white rounded-xl border border-gray-100 p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-0.5">
-  <div class="flex items-center gap-2 mb-3">
-    <span class="inline-block px-2 py-0.5 text-xs font-medium text-primary bg-surface rounded-full">{category}</span>
+<a href={href} class="group card-premium p-6 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent/0 rounded-r opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="flex items-center gap-2 mb-4">
+    <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-primary bg-accent/10 rounded-lg">{category}</span>
     {aideMontant && (
-      <span class="inline-block px-2 py-0.5 text-xs font-semibold text-white bg-accent-warm rounded-full">
+      <span class="inline-flex items-center px-2.5 py-1 text-xs font-bold text-amber-700 bg-amber-50 rounded-lg">
         Aide dispo
       </span>
     )}
   </div>
-  <h3 class="text-base font-heading font-bold text-text group-hover:text-primary transition-colors line-clamp-2">{title}</h3>
-  <p class="mt-1.5 text-sm text-text-muted line-clamp-2">{description}</p>
+  <h3 class="text-base font-heading font-bold text-text group-hover:text-primary transition-colors duration-200 line-clamp-2">{title}</h3>
+  <p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">{description}</p>
+  <div class="mt-4 flex items-center text-xs font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    Lire l'article
+    <svg class="w-3.5 h-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+  </div>
 </a>

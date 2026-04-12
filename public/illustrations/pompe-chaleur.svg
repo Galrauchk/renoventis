@@ -1,46 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
-  <rect width="400" height="350" fill="#F0FAF4" rx="12"/>
+  <defs>
+    <linearGradient id="pacUnit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFB"/>
+      <stop offset="100%" stop-color="#E5E7EB"/>
+    </linearGradient>
+    <linearGradient id="heatFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#F4A261"/>
+    </linearGradient>
+    <filter id="pacShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1B4332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
   <!-- Outdoor unit -->
-  <g transform="translate(40,100)">
-    <rect x="0" y="0" width="120" height="100" rx="8" fill="white" stroke="#1B4332" stroke-width="2"/>
-    <text x="60" y="-10" font-family="Inter,sans-serif" font-size="11" fill="#1B4332" text-anchor="middle" font-weight="600">Unité extérieure</text>
-    <!-- Fan -->
-    <circle cx="60" cy="45" r="30" fill="none" stroke="#52B788" stroke-width="2"/>
-    <path d="M60 20C60 20 75 35 60 45C45 35 60 20 60 20Z" fill="#52B788" opacity="0.5"/>
-    <path d="M60 70C60 70 45 55 60 45C75 55 60 70 60 70Z" fill="#52B788" opacity="0.5"/>
-    <path d="M35 45C35 45 50 30 60 45C50 60 35 45 35 45Z" fill="#52B788" opacity="0.5"/>
-    <path d="M85 45C85 45 70 60 60 45C70 30 85 45 85 45Z" fill="#52B788" opacity="0.5"/>
-    <circle cx="60" cy="45" r="5" fill="#1B4332"/>
-    <!-- Grille -->
-    <line x1="10" y1="85" x2="110" y2="85" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
-    <line x1="10" y1="90" x2="110" y2="90" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
-    <!-- Air arrows -->
-    <path d="M-15 30L-5 45L-15 60" stroke="#52B788" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M-25 35L-15 45L-25 55" stroke="#52B788" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <g filter="url(#pacShadow)" transform="translate(40,80)">
+    <rect x="0" y="60" width="120" height="140" rx="8" fill="url(#pacUnit)" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Fan grille -->
+    <circle cx="60" cy="120" r="40" fill="none" stroke="#9CA3AF" stroke-width="2"/>
+    <circle cx="60" cy="120" r="30" fill="none" stroke="#D1D5DB" stroke-width="1"/>
+    <circle cx="60" cy="120" r="20" fill="none" stroke="#D1D5DB" stroke-width="1"/>
+    <!-- Fan blades -->
+    <path d="M60 100 Q70 110 60 120 Q50 110 60 100Z" fill="#52B788" opacity="0.6"/>
+    <path d="M80 120 Q70 130 60 120 Q70 110 80 120Z" fill="#52B788" opacity="0.6"/>
+    <path d="M60 140 Q50 130 60 120 Q70 130 60 140Z" fill="#52B788" opacity="0.6"/>
+    <path d="M40 120 Q50 110 60 120 Q50 130 40 120Z" fill="#52B788" opacity="0.6"/>
+    <circle cx="60" cy="120" r="5" fill="#1B4332"/>
+    <!-- Brand plate -->
+    <rect x="30" y="170" width="60" height="15" rx="3" fill="#1B4332"/>
+    <text x="60" y="181" font-family="Inter,sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="600">PAC</text>
+    <!-- Legs -->
+    <rect x="10" y="200" width="15" height="12" rx="2" fill="#9CA3AF"/>
+    <rect x="95" y="200" width="15" height="12" rx="2" fill="#9CA3AF"/>
+    <text x="60" y="45" font-family="Urbanist,sans-serif" font-size="12" fill="#1B4332" text-anchor="middle" font-weight="700">Unité extérieure</text>
   </g>
-  <!-- Connection pipes -->
-  <path d="M160 150L200 150L200 160L240 160" stroke="#F4A261" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M160 165L200 165L200 175L240 175" stroke="#52B788" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <text x="200" y="145" font-family="Inter,sans-serif" font-size="9" fill="#F4A261" text-anchor="middle">chaud</text>
-  <text x="200" y="192" font-family="Inter,sans-serif" font-size="9" fill="#52B788" text-anchor="middle">froid</text>
-  <!-- Indoor unit / house -->
-  <g transform="translate(240,80)">
-    <rect x="0" y="30" width="130" height="140" rx="4" fill="white" stroke="#1B4332" stroke-width="2"/>
-    <path d="M-5 30L65 0L135 30Z" fill="#1B4332"/>
-    <text x="65" y="55" font-family="Inter,sans-serif" font-size="11" fill="#1B4332" text-anchor="middle" font-weight="600">Intérieur</text>
-    <!-- Radiators -->
-    <rect x="20" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
-    <rect x="32" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
-    <rect x="44" y="100" width="8" height="50" rx="2" fill="#F4A261" opacity="0.6"/>
-    <!-- Heat waves -->
-    <path d="M70 110C73 105 77 110 80 105" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
-    <path d="M70 120C73 115 77 120 80 115" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
-    <path d="M70 130C73 125 77 130 80 125" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- Heat flow connection -->
+  <g>
+    <path d="M170 170 C220 170, 220 160, 250 160" stroke="url(#heatFlow)" stroke-width="3" fill="none" stroke-dasharray="8 4">
+      <animate attributeName="stroke-dashoffset" values="0;-24" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M170 190 C220 190, 220 180, 250 180" stroke="url(#heatFlow)" stroke-width="3" fill="none" stroke-dasharray="8 4">
+      <animate attributeName="stroke-dashoffset" values="0;-24" dur="2s" repeatCount="indefinite"/>
+    </path>
   </g>
-  <!-- COP indicator -->
-  <g transform="translate(150,270)">
-    <rect x="0" y="0" width="100" height="40" rx="8" fill="#1B4332"/>
-    <text x="50" y="17" font-family="Urbanist,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="600">COP jusqu'à</text>
-    <text x="50" y="34" font-family="Urbanist,sans-serif" font-size="16" fill="#52B788" text-anchor="middle" font-weight="700">5.0</text>
+
+  <!-- Indoor unit (wall mounted) -->
+  <g filter="url(#pacShadow)" transform="translate(240,60)">
+    <!-- Wall -->
+    <rect x="0" y="40" width="130" height="200" rx="6" fill="#F8FBF9" stroke="#E5E7EB" stroke-width="1.5"/>
+    <!-- Unit -->
+    <rect x="15" y="70" width="100" height="40" rx="8" fill="white" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Air flow indicators -->
+    <path d="M30 115 Q50 125 70 115" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M25 125 Q55 140 85 125" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M20 135 Q55 155 90 135" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <!-- LED -->
+    <circle cx="100" cy="82" r="3" fill="#52B788"/>
+    <!-- Temperature display -->
+    <text x="55" y="95" font-family="Urbanist,sans-serif" font-size="14" fill="#1B4332" text-anchor="middle" font-weight="800">21°C</text>
+    <text x="65" y="30" font-family="Urbanist,sans-serif" font-size="12" fill="#1B4332" text-anchor="middle" font-weight="700">Unité intérieure</text>
+
+    <!-- Radiator -->
+    <g transform="translate(15,160)">
+      <rect x="0" y="0" width="100" height="60" rx="4" fill="white" stroke="#D1D5DB" stroke-width="1.5"/>
+      <line x1="20" y1="5" x2="20" y2="55" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="40" y1="5" x2="40" y2="55" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="60" y1="5" x2="60" y2="55" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="80" y1="5" x2="80" y2="55" stroke="#E5E7EB" stroke-width="1.5"/>
+      <!-- Heat waves -->
+      <path d="M15 -5 Q20 -15 25 -5" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <path d="M45 -5 Q50 -18 55 -5" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <path d="M75 -5 Q80 -15 85 -5" stroke="#F4A261" stroke-width="1.5" fill="none" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Efficiency badge -->
+  <g transform="translate(310,30)" filter="url(#pacShadow)">
+    <rect x="0" y="0" width="70" height="28" rx="14" fill="#52B788"/>
+    <text x="35" y="18" font-family="Urbanist,sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="700">COP 4.5</text>
   </g>
 </svg>

@@ -21,60 +21,64 @@ const outilsLinks = [
 ];
 ---
 
-<footer class="bg-primary text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+<footer class="relative bg-dark overflow-hidden">
+  <!-- Decorative gradient -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- Brand -->
-      <div>
-        <img src="/logo-renoventis-light.svg" alt="Renoventis" class="h-8 mb-4" />
-        <p class="text-white/70 text-sm leading-relaxed">
+      <div class="lg:col-span-1">
+        <img src="/logo-renoventis-light.svg" alt="Renoventis" class="h-8 mb-5" />
+        <p class="text-white/60 text-sm leading-relaxed max-w-xs">
           Rénovez mieux, dépensez moins. Guides pratiques et mise en relation avec des artisans RGE certifiés.
         </p>
       </div>
 
       <!-- Travaux -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Travaux</h3>
-        <ul class="space-y-2.5">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-5">Travaux</h3>
+        <ul class="space-y-3">
           {travauxLinks.map(link => (
-            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+            <li><a href={link.href} class="text-sm text-white/60 hover:text-white transition-colors duration-200">{link.label}</a></li>
           ))}
         </ul>
       </div>
 
       <!-- Aides -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Aides</h3>
-        <ul class="space-y-2.5">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-5">Aides</h3>
+        <ul class="space-y-3">
           {aidesLinks.map(link => (
-            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+            <li><a href={link.href} class="text-sm text-white/60 hover:text-white transition-colors duration-200">{link.label}</a></li>
           ))}
         </ul>
       </div>
 
       <!-- Outils -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-accent mb-4">Outils</h3>
-        <ul class="space-y-2.5">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-5">Outils</h3>
+        <ul class="space-y-3">
           {outilsLinks.map(link => (
-            <li><a href={link.href} class="text-sm text-white/70 hover:text-white transition-colors">{link.label}</a></li>
+            <li><a href={link.href} class="text-sm text-white/60 hover:text-white transition-colors duration-200">{link.label}</a></li>
           ))}
         </ul>
       </div>
     </div>
 
     <!-- Disclaimer + legal -->
-    <div class="mt-12 pt-8 border-t border-white/10">
-      <p class="text-xs text-white/50 leading-relaxed mb-4">
+    <div class="mt-16 pt-8 border-t border-white/5">
+      <p class="text-xs text-white/40 leading-relaxed mb-6 max-w-4xl">
         Renoventis est un site de mise en relation entre particuliers et artisans certifiés RGE. Renoventis n'est ni un artisan, ni un organisme officiel. Les montants d'aides indiqués sont donnés à titre indicatif et dépendent de votre situation personnelle. Consultez les sites officiels (ANAH, ADEME) pour les conditions exactes.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-white/40">&copy; {new Date().getFullYear()} Renoventis. Tous droits réservés.</p>
-        <div class="flex items-center gap-4">
-          <a href="/mentions-legales/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Mentions légales</a>
-          <a href="/politique-confidentialite/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Politique de confidentialité</a>
-          <a href="/contact/" class="text-xs text-white/40 hover:text-white/60 transition-colors">Contact</a>
-          <a href="/a-propos/" class="text-xs text-white/40 hover:text-white/60 transition-colors">À propos</a>
+        <p class="text-xs text-white/30">&copy; {new Date().getFullYear()} Renoventis. Tous droits réservés.</p>
+        <div class="flex items-center gap-6">
+          <a href="/mentions-legales/" class="text-xs text-white/30 hover:text-white/60 transition-colors">Mentions légales</a>
+          <a href="/politique-confidentialite/" class="text-xs text-white/30 hover:text-white/60 transition-colors">Confidentialité</a>
+          <a href="/contact/" class="text-xs text-white/30 hover:text-white/60 transition-colors">Contact</a>
+          <a href="/a-propos/" class="text-xs text-white/30 hover:text-white/60 transition-colors">À propos</a>
         </div>
       </div>
     </div>

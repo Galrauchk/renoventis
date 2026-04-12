@@ -22,19 +22,22 @@ const faqItems = [
   description="Guide VMC double flux 2026 : prix installation, aides MaPrimeRénov, économies de chauffage, comparatif simple/double flux, artisans RGE."
   jsonLd={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Installation VMC', provider: { '@type': 'Organization', name: 'Renoventis' }, areaServed: { '@type': 'Country', name: 'France' } }}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'VMC double flux' }]} />
 
-    <div class="grid lg:grid-cols-3 gap-12">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="lg:col-span-2">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
-          VMC double flux 2026 : prix, aides et installation
-        </h1>
-        <p class="mt-4 text-lg text-text-muted">
+        <div class="fade-up">
+          <span class="inline-flex items-center px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 rounded-lg mb-4">Guide complet</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-text">
+            VMC double flux 2026 : prix, aides et installation
+          </h1>
+        </div>
+        <p class="mt-4 text-lg text-text-muted leading-relaxed">
           La VMC double flux assure un air sain dans votre logement tout en récupérant jusqu'à 90% de la chaleur. Un complément indispensable à l'isolation.
         </p>
 
-        <div class="mt-12 prose prose-lg max-w-none">
+        <div class="mt-12 prose prose-lg max-w-none fade-up">
           <h2 class="text-2xl font-heading font-bold text-text">Pourquoi installer une VMC double flux ?</h2>
           <p>La ventilation mécanique contrôlée double flux renouvelle l'air intérieur tout en récupérant la chaleur de l'air extrait. Un échangeur thermique transfère les calories de l'air vicié sortant vers l'air neuf entrant.</p>
           <ul>
@@ -47,37 +50,37 @@ const faqItems = [
           <h2 class="text-2xl font-heading font-bold text-text">Comparatif VMC simple flux vs double flux</h2>
         </div>
 
-        <div class="mt-8 overflow-x-auto">
+        <div class="mt-8 overflow-x-auto fade-up">
           <table class="w-full text-sm border-collapse">
             <thead>
-              <tr class="bg-primary text-white">
-                <th class="px-4 py-3 text-left font-semibold rounded-tl-lg">Critère</th>
+              <tr class="bg-gradient-to-r from-primary to-dark text-white">
+                <th class="px-4 py-3 text-left font-semibold rounded-tl-xl">Critère</th>
                 <th class="px-4 py-3 text-left font-semibold">Simple flux</th>
-                <th class="px-4 py-3 text-left font-semibold rounded-tr-lg">Double flux</th>
+                <th class="px-4 py-3 text-left font-semibold rounded-tr-xl">Double flux</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-gray-100">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Prix posé</td>
                 <td class="px-4 py-3">500-1 500€</td>
                 <td class="px-4 py-3">4 000-8 000€</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Récupération chaleur</td>
                 <td class="px-4 py-3">0%</td>
                 <td class="px-4 py-3 text-accent font-semibold">80-90%</td>
               </tr>
-              <tr class="border-b border-gray-100">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Économies chauffage</td>
                 <td class="px-4 py-3">0%</td>
                 <td class="px-4 py-3 text-accent font-semibold">15-25%</td>
               </tr>
-              <tr class="border-b border-gray-100 bg-surface">
+              <tr class="border-b border-gray-100 hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">Filtration air</td>
                 <td class="px-4 py-3">Non</td>
                 <td class="px-4 py-3 text-accent font-semibold">Oui (F7/G4)</td>
               </tr>
-              <tr>
+              <tr class="hover:bg-surface/50 transition-colors">
                 <td class="px-4 py-3 font-medium">MaPrimeRénov'</td>
                 <td class="px-4 py-3">Non éligible</td>
                 <td class="px-4 py-3 text-accent-warm font-semibold">Jusqu'à 2 500€</td>
@@ -86,7 +89,7 @@ const faqItems = [
           </table>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 fade-up">
           <h2 class="text-2xl font-heading font-bold text-text mb-6">Aides disponibles</h2>
           <div class="grid sm:grid-cols-2 gap-4">
             <AideCard title="MaPrimeRénov'" montant="Jusqu'à 2 500€" description="Pour une VMC double flux." conditions="Artisan RGE obligatoire" href="/aides-renovation/" />
