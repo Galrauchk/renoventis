@@ -37,20 +37,20 @@
         <h3 class="text-xl font-heading font-bold text-text mb-4">Votre logement</h3>
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Type de logement</label>
-            <select name="type_logement" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
+            <label for="devis-type-logement" class="block text-sm font-medium text-text mb-1">Type de logement</label>
+            <select id="devis-type-logement" name="type_logement" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
               <option value="">Sélectionner</option>
               <option value="maison">Maison individuelle</option>
               <option value="appartement">Appartement</option>
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Surface habitable (m²)</label>
-            <input type="number" name="surface" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="100" />
+            <label for="devis-surface" class="block text-sm font-medium text-text mb-1">Surface habitable (m²)</label>
+            <input type="number" id="devis-surface" name="surface" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="100" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Année de construction</label>
-            <select name="annee_construction" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
+            <label for="devis-annee" class="block text-sm font-medium text-text mb-1">Année de construction</label>
+            <select id="devis-annee" name="annee_construction" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
               <option value="">Sélectionner</option>
               <option value="avant-1975">Avant 1975</option>
               <option value="1975-1990">1975-1990</option>
@@ -60,8 +60,8 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">DPE actuel (si connu)</label>
-            <select name="dpe_actuel" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
+            <label for="devis-dpe" class="block text-sm font-medium text-text mb-1">DPE actuel (si connu)</label>
+            <select id="devis-dpe" name="dpe_actuel" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none">
               <option value="">Je ne sais pas</option>
               <option value="A">A</option><option value="B">B</option><option value="C">C</option>
               <option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
@@ -97,20 +97,20 @@
         <h3 class="text-xl font-heading font-bold text-text mb-4">Vos coordonnées</h3>
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Nom complet</label>
-            <input type="text" name="nom" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="Jean Dupont" />
+            <label for="devis-nom" class="block text-sm font-medium text-text mb-1">Nom complet</label>
+            <input type="text" id="devis-nom" name="nom" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="Jean Dupont" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Email</label>
-            <input type="email" name="email" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="jean@email.fr" />
+            <label for="devis-email" class="block text-sm font-medium text-text mb-1">Email</label>
+            <input type="email" id="devis-email" name="email" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="jean@email.fr" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Téléphone</label>
-            <input type="tel" name="telephone" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="06 XX XX XX XX" />
+            <label for="devis-tel" class="block text-sm font-medium text-text mb-1">Téléphone</label>
+            <input type="tel" id="devis-tel" name="telephone" required class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="06 XX XX XX XX" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-text mb-1">Code postal</label>
-            <input type="text" name="code_postal" required pattern="[0-9]{5}" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="75001" />
+            <label for="devis-cp" class="block text-sm font-medium text-text mb-1">Code postal</label>
+            <input type="text" id="devis-cp" name="code_postal" required pattern="[0-9]{5}" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none" placeholder="75001" />
           </div>
         </div>
       </div>
@@ -130,6 +130,11 @@
       </div>
 
       <input type="hidden" name="type" value="devis" />
+      <!-- Honeypot anti-bot -->
+      <div class="hidden" aria-hidden="true">
+        <label for="devis-website">Ne pas remplir</label>
+        <input type="text" id="devis-website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
     </form>
   </div>
 
@@ -187,11 +192,12 @@
       }
     });
     try {
-      await fetch('/.netlify/functions/send-contact-email', {
+      const res = await fetch('/.netlify/functions/send-contact-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       container.classList.add('hidden');
       success.classList.remove('hidden');
     } catch {

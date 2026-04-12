@@ -7,7 +7,9 @@ import SimulateurAides from '../components/SimulateurAides';
 import { getCollection } from 'astro:content';
 
 const guides = await getCollection('guides');
-const recentGuides = guides.slice(0, 6);
+const recentGuides = guides
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 6);
 
 const jsonLd = [
   {
@@ -24,11 +26,6 @@ const jsonLd = [
     '@type': 'WebSite',
     name: 'Renoventis',
     url: 'https://renoventis.fr',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://renoventis.fr/guides/?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
   },
 ];
 

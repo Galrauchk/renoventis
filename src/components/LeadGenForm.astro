@@ -36,6 +36,12 @@ const { travaux = '', title = 'Obtenez 3 devis gratuits' } = Astro.props;
       <input type="text" id="lead-cp" name="code_postal" required pattern="[0-9]{5}" class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="75001" />
     </div>
 
+    <!-- Honeypot anti-bot -->
+    <div class="hidden" aria-hidden="true">
+      <label for="lead-website">Ne pas remplir</label>
+      <input type="text" id="lead-website" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
     <button type="submit" class="w-full py-3 px-6 text-sm font-semibold text-white bg-accent-warm hover:bg-amber-500 rounded-lg transition-colors shadow-lg shadow-amber-500/25">
       Recevoir mes devis gratuits
     </button>
@@ -62,11 +68,12 @@ const { travaux = '', title = 'Obtenez 3 devis gratuits' } = Astro.props;
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
     try {
-      await fetch('/.netlify/functions/send-contact-email', {
+      const res = await fetch('/.netlify/functions/send-contact-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       form.classList.add('hidden');
       success.classList.remove('hidden');
     } catch {

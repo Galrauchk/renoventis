@@ -40,7 +40,7 @@ export default defineConfig({
           item.priority = 0.3;
           item.changefreq = 'monthly';
         }
-        item.lastmod = '2026-03-29';
+        item.lastmod = new Date().toISOString().split('T')[0];
         return item;
       },
     }),
